@@ -1,0 +1,36 @@
+ /**
+*
+* Colours
+
+*
+**/
+ $primaryColor:#353335;
+ $secondaryColor:#898989;
+ $tertiaryColor:#ececec;
+ $highlightColor:#bcd531;
+ $lightFontColor:white;
+ $darkFontColor:#333;
+ $white:#fafafa;
+ $black:#353335;
+ /**
+ *
+ * Spaces
+ *
+ **/
+ $double-space: 48px;
+ $full-half-space:36px;
+ $full-space: 24px;
+ $half-space:12px;
+ $quarter-space:6px;
+ .background-color--primary {
+     background-color:$primaryColor;
+     color:$lightFontColor;
+ }
+ .background-color--secondary {
+     background-color:$secondaryColor;
+     color:$lightFontColor;
+ }
+ .background-color--tertiary {
+     background-color:$tertiaryColor;
+     color:$darkFontColor;
+ }

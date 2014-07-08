@@ -1,0 +1,291 @@
+.menu {
+    .menuHeaders {
+        margin-top:5px;
+        width:100%;
+        height: 65px;
+        background-color:$primaryColor;
+        .nav {
+            li {
+                a {
+                    color:white;
+                    padding:25px 30px 0px 0;
+                    float: left;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
+        }
+        .dots {
+            width:100%;
+            height: 5px;
+            float: left;
+            .dot {
+                width:5px;
+                height:5px;
+                border-radius:50%;
+                background-color:white;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                display: inline;
+                background-color: white;
+                position: absolute;
+                left: 0;
+                margin-right: 4px;
+                margin-top: 5px;
+                &.dot1 {
+                    transition: all 0.4s 0s;
+                }
+                &.dot2 {
+                    transition: all 0.4s 0.1s;
+                }
+                &.dot3 {
+                    transition: all 0.4s 0.2s;
+                }
+            }
+            &.pos0 {
+                .dot1 {
+                    transform:translateX(40px);
+                }
+                .dot2 {
+                    transform:translateX(40+8px);
+                }
+                .dot3 {
+                    transform:translateX(40+16px);
+                }
+            }
+            &.pos1 {
+                .dot1 {
+                    transform:translateX(245px);
+                }
+                .dot2 {
+                    transform:translateX(245+8px);
+                }
+                .dot3 {
+                    transform:translateX(245+16px);
+                }
+            }
+            &.pos2 {
+                .dot1 {
+                    transform:translateX(490px);
+                }
+                .dot2 {
+                    transform:translateX(490+8px);
+                }
+                .dot3 {
+                    transform:translateX(490+16px);
+                }
+            }
+            &.pos3 {
+                .dot1 {
+                    transform:translateX(645px);
+                }
+                .dot2 {
+                    transform:translateX(645+8px);
+                }
+                .dot3 {
+                    transform:translateX(645+16px);
+                }
+            }
+            &.pos4 {
+                .dot1 {
+                    transform:translateX(810px);
+                }
+                .dot2 {
+                    transform:translateX(810+8px);
+                }
+                .dot3 {
+                    transform:translateX(810+16px);
+                }
+            }
+        }
+    }
+    .menuContainer {
+        .container {
+            overflow: hidden;
+            height: 330px;
+        }
+        .menuSubContainer {
+            width:1280*6px;
+            transition: all 1s 0s;
+        }
+        .menuSubContainer.pos0 {
+            transform:translateX(0);
+        }
+        .menuSubContainer.pos1 {
+            transform:translateX(-1280px);
+        }
+        .menuSubContainer.pos2 {
+            transform:translateX(-1280px*2);
+        }
+        .menuSubContainer.pos3 {
+            transform:translateX(-1280px*3);
+        }
+        .menuSubContainer.pos4 {
+            transform:translateX(-1280px*4);
+        }
+        .menuBlock {
+            float: left;
+            min-height: 330px;
+            li {
+                position: relative;
+                width: 320px;
+                float: left;
+                .linktext {
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 24px;
+                    text-align: left;
+                    width: 150px;
+                    height: 50px;
+                    a {
+                        text-decoration:none;
+                        line-height: 1.1;
+                    }
+                }
+            }
+        }
+        .menu--icons {
+            float: left;
+            transition: all 0.3s;
+            * {
+                transition: all 0.3s;
+                fill:$black;
+            }
+        }
+        li:hover {
+            .menu--icons {
+                transform:scale(1.1);
+                * {
+                    fill: $highlightColor;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .menu {
+        .menuContainer {
+            .container {
+                overflow: hidden;
+                height: 330px;
+            }
+            .menuSubContainer {
+                width:1280*6px;
+                transition: all 1s 0s;
+            }
+            .menuSubContainer.pos0 {
+                transform:translateX(0);
+            }
+            .menuSubContainer.pos1 {
+                transform:translateX(-1280px);
+            }
+            .menuSubContainer.pos2 {
+                transform:translateX(-1280px*2);
+            }
+            .menuSubContainer.pos3 {
+                transform:translateX(-1280px*3);
+            }
+            .menuSubContainer.pos4 {
+                transform:translateX(-1280px*4);
+            }
+            .menuBlock {
+                min-height: 330px;
+                li {
+                    width: 320px;
+                    height: 280px;
+                    padding-left:75px;
+                    float: left;
+                    .linktext {
+                        position: absolute;
+                        bottom: 0;
+                        left: 35%;
+                        font-size: 24px;
+                        width: 150px;
+                        height: 50px;
+                    }
+                }
+                &.it-3 {
+                    margin-left:140px;
+                }
+            }
+            .menu--icons {
+                float: left;
+                max-height: 155px;
+                margin-top: 50px;
+                * {
+                    fill:$black;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+    .menu {
+        .menuContainer {
+            .container {
+                overflow: hidden;
+                height: 330px;
+            }
+            .menuSubContainer {
+                width:960*6px;
+                transition: all 1s 0s;
+            }
+            .menuSubContainer.pos0 {
+                transform:translateX(0);
+            }
+            .menuSubContainer.pos1 {
+                transform:translateX(-960px);
+            }
+            .menuSubContainer.pos2 {
+                transform:translateX(-960px*2);
+            }
+            .menuSubContainer.pos3 {
+                transform:translateX(-960px*3);
+            }
+            .menuSubContainer.pos4 {
+                transform:translateX(-960px*4);
+            }
+            .menuBlock {
+                min-height: 330px;
+                li {
+                    width: 245px;
+                    height: 258px;
+                    padding-left:55px;
+                    float: left;
+                    .linktext {
+                        position: absolute;
+                        bottom: 0;
+                        left: 35%;
+                        font-size: 24px;
+                        width: 150px;
+                        height: 50px;
+                    }
+                }
+                &.it-3 {
+                    margin-left:30px;
+                }
+            }
+            .menu--icons {
+                float: left;
+                max-height: 130px;
+                margin-top: 50px;
+                * {
+                    fill:$black;
+                }
+            }
+        }
+    }
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+ @media only screen and (min-width: 768px) and (max-width: 959px) {
+}
+/* All Mobile Sizes (devices and browser) */
+ @media only screen and (max-width: 767px) {
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+ @media only screen and (max-width: 479px) {
+}

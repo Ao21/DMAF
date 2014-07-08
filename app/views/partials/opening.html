@@ -1,0 +1,61 @@
+<section class="openinghours">
+    <div class="selector ">
+        <h3 class="active">Monday</h3>
+        <h3>Tuesday</h3>
+        <h3>Wednesday</h3>
+        <h3>Thursday</h3>
+        <h3>Friday</h3>
+        <h3>Saturday</h3>
+    </div>
+
+    <div class="times clearfix">
+        <div class="grid ">
+            <div class="gridRow push-half--bottom">
+                <p class="title">
+                    <strong>Fabrication Labs</strong>
+                </p>
+                <div ng-repeat="item in openingHours[0].days  track by $index" class="time ">
+                    {{item}}
+                </div>
+            </div>
+            <div class="gridRow ">
+                <p class="title">Wood</p>
+                <div ng-repeat="item in openingHours[0].wood  track by $index" class="time time-animation {{item}}">
+                </div>
+            </div>
+            <div class="gridRow ">
+                <p class="title">Metal</p>
+                <div ng-repeat="item in openingHours[0].metal  track by $index" class="time time-animation {{item}}">
+                </div>
+            </div>
+            <div class="gridRow ">
+                <p class="title">Digfab</p>
+                <div ng-repeat="item in openingHours[0].digFab  track by $index" class="time time-animation {{item}}">
+                </div>
+            </div>
+            <div class="gridRow push--top push-half--bottom">
+                <p class="title">
+                    <strong>Media Lab</strong>
+                </p>
+
+            </div>
+            <div class="gridRow ">
+                <p class="title">2D Media</p>
+                <div ng-repeat="item in openingHours[0].wood  track by $index" class="time time-animation {{item}}">
+                </div>
+            </div>
+            <div class="gridRow ">
+                <p class="title">3D Media</p>
+                <div ng-repeat="item in openingHours[0].metal  track by $index" class="time time-animation {{item}}">
+                </div>
+            </div>
+            <div class="gridRow ">
+                <p class="title">Mixed Media</p>
+                <div ng-repeat="item in openingHours[0].digFab  track by $index" class="time time-animation {{item}}">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,112 @@
+/** the nav object **/
+.nav {}
+  .nav { margin-bottom: 0; }
+		.nav li { 
+			list-style: none; 
+			list-style-image: none;
+			margin-left:0;
+		}
+			/** nav object for horizontal navigations **/
+			.nav.horizontal,
+			.nav.horizontal li { display: inline; }
+			
+				/** nav object for horizontal navigations with divider
+				 * 	 1. divider style
+				 *   2. IE6, IE7 & IE8 content hack  
+				 */	
+				.nav.horizontal.divider li:after,
+				.lt-ie9 .nav.horizontal.divider li .ie-after {
+				    content: "|";  /* 1. */
+					padding:0 10px;
+				    display:inline-block;
+				    display:-moz-inline-stack;
+	          		zoom: 1;
+	          		*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = "|"); /* 2. */
+				    *display:inline;
+				    font-style: normal;
+				}
+				.nav.horizontal.divider li:last-child:after,
+				.lt-ie9 .nav.horizontal.divider li:last-child .ie-after {
+					content: "";
+				  	background: none repeat scroll 0 0 transparent;
+				  	padding-left:0;
+				  	/* IE6, IE7 & IE8 dont display content Hack ;)  */
+				  	*color:transparent;
+				  	*background-color: transparent;
+				  	*font-size: 0;
+				  	*line-height: 0;
+				}							
+	
+			/** nav object for breadcrumb, with divider **/
+			.nav.breadcrumb li{ 
+				display: inline; 
+				margin-left:20px;
+			}
+			/** 
+			 * 	1. divider 
+			 * 	2. IE6, IE7 & IE8 content hack  
+			 */
+			.nav.breadcrumb li:after,
+			.lt-ie9 .nav.breadcrumb li .ie-after { 
+				content: "\25B8"; /* 1. */
+			    display:inline-block;
+			    display:-moz-inline-stack;
+          		zoom: 1;
+			    *display:inline;
+			    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = "\25B8"); /* 2. */			    
+			    font-size:1.5em;
+			    font-style: normal;
+			    padding:0 0 0 20px;
+			    vertical-align:middle;			    
+			}
+			.nav.breadcrumb li:last-child:after, 
+			.lt-ie9 .nav.breadcrumb li:last-child .ie-after {
+				content: "";
+				/* IE6, IE7 & IE8 dont display content Hack ;)  */
+			  	*color:transparent;
+			  	*background-color: transparent;
+			  	*font-size: 0;
+			  	*line-height: 0;
+			}
+			.nav.breadcrumb li a {color: #2c4460 !important;}
+			
+			/** nav object for pagination **/
+			.nav.pagination { margin: 20px 0; }
+				.nav.pagination {
+				  display: inline-block;
+				  display:-moz-inline-stack;
+				  *display: inline;
+				  margin-bottom: 0;
+				  margin-left: 0;
+				  -webkit-border-radius: 4px;
+				     -moz-border-radius: 4px;
+				          border-radius: 4px;
+				  *zoom: 1;
+				  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+				     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+				          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+				}				
+				.nav.pagination > li { display: inline; }
+				/* 1. & 2. override with your color value */
+				.nav.pagination > li > a {
+				  float: left;
+				  padding: 4px 12px;
+				  line-height: 20px;
+				  text-decoration: none;
+				  background-color: #ffffff; /* 1. */
+				  border: 1px solid #dddddd; /* 2. */
+				  border-left-width: 0;
+				}
+				.nav.pagination > li > a:hover,
+				.nav.pagination > .active > a {
+				  background-color: #f5f5f5;
+				}				
+				.nav.pagination > .active > a {
+				  color: #999999;
+				  cursor: default;
+				}
+			
+				
+		/* `IE6, IE7 & IE8 ::after polyfill ============================================= */
+		.lt-ie9 .nav.horizontal.divider li,
+		.lt-ie9 .nav.breadcrumb li { zoom: expression( this.runtimeStyle.zoom="1", this.appendChild( document.createElement("i") ).className="ie-after" ); }

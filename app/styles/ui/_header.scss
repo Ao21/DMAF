@@ -1,0 +1,11 @@
+header{
+	height: 120px;
+	width:100%;
+	position: relative;
+	background-color: $primaryColor;
+	h2{
+		color:$white;
+		position: absolute;
+		top: 70px;
+	}
+}
