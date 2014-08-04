@@ -570,6 +570,18 @@ label span, legend span {
 .text--right {
     text-align:right;
 }
+
+.text--light{
+    font-weight: 200;
+}
+
+.text--normal{
+    font-weight: 400
+}
+
+.text--bold{
+    font-weight: 600;
+}
 /*------------------------------------*\
     $CLEARFIX
 \*------------------------------------*/
@@ -604,7 +616,7 @@ label span, legend span {
 }
 .site-footer, .page-wrap:after {
     /* .push must be the same height as footer */
-    height: 168px;
+   // height: 168px;
 }
 .bkImg {
     background-size:cover;

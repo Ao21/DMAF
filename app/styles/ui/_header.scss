@@ -2,10 +2,31 @@ header{
 	height: 120px;
 	width:100%;
 	position: relative;
-	background-color: $primaryColor;
+	background-color: $white;
 	h2{
-		color:$white;
+		color:$primaryColor;
 		position: absolute;
 		top: 70px;
+	}
+}
+
+
+.footer--giant{
+	padding:160px 0 160px;
+	h4{
+		text-align: center;
+	}
+}
+
+
+.footer--medium{
+	position:relative;
+	padding:150px 0 150px;
+	h6{
+		position:absolute;
+		bottom:10px;
+		font-weight: 800;
+		right:15px;
+		text-transform:uppercase;
 	}
 }

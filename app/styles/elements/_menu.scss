@@ -138,6 +138,7 @@
                     text-align: left;
                     width: 150px;
                     height: 50px;
+                    line-height: 1.1;
                     a {
                         text-decoration:none;
                         line-height: 1.1;
@@ -150,15 +151,16 @@
             transition: all 0.3s;
             * {
                 transition: all 0.3s;
-                fill:$black;
+                fill:$primaryColor;
             }
         }
-        li:hover {
+        li:hover,li.active {
             .menu--icons {
                 transform:scale(1.1);
-                * {
-                    fill: $highlightColor;
+                *{
+                    fill:$highlightColor;
                 }
+                
             }
         }
     }
@@ -213,9 +215,7 @@
                 float: left;
                 max-height: 155px;
                 margin-top: 50px;
-                * {
-                    fill:$black;
-                }
+                
             }
         }
     }
@@ -270,9 +270,7 @@
                 float: left;
                 max-height: 130px;
                 margin-top: 50px;
-                * {
-                    fill:$black;
-                }
+                
             }
         }
     }

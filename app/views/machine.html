@@ -1,0 +1,63 @@
+<div class="container--wide-small background-color--primary machines__header" style="">
+    <div class="container">
+        <h1>machines & equipment: {{label}}</h1>
+    </div>
+</div>
+
+
+<div class="container--wide-medium bkImg" style="background-image:url(images/{{bkimg}})">
+</div>
+
+
+<div class="background-color--primary">
+    <div class="container">
+        <div class="grid machine">
+            <div ng-repeat="item in machine" class="grid__item  {{gridRef}}">
+                <div class="machine">
+                    <h3 class="push--bottom">{{item.name}}</h3>
+                    <h4 class="push-half--bottom">{{item.subname}}</h4>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><strong>Brand:</strong></td>
+                                <td>{{item.brand}}</td>
+                            </tr>
+                            <tr ng-show="{{item.bedSize.length}}">
+                                <td><strong>Maximum Bed Size:</strong></td>
+                                <td>{{item.bedSize}}</td>
+                            </tr>
+                            <tr ng-show="{{item.cost.length}}">
+                                <td><strong>Cost:</strong></td>
+                                <td>{{item.cost}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 class="push-double--top">DOWNLOADS</h4>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container push-double--ends">
+    <p>{{description}}</p>
+    <h1 class="text--light" style="color:#00aef0">Materials Allowed</h1>
+    <p>{{materialsAllowed}}</p>
+    <h1 class="text--light" style="color:#ec135b">Don't Use</h1>
+    <p>{{materialsDisallowed}}</p>
+</div>
+<div class="background-color--primary">
+    <div class="container soft-double--ends">
+        <h1 class="text--light large push--bottom">Want to make a booking?</h1>
+        <ul class="bookings">
+            <li ng-repeat="p in bookings">{{p}}</li>
+        </ul>
+        <h1 class="large text--light text--center push-double--ends">Got all that?</h1>
+        <h1 class="text--light text--center">Yes | No</h1>
+
+    </div>
+</div>
+<div class="footer--medium">
+    <h6>Design Modelling and Fabrication Lab 2014</h6>
+</div>

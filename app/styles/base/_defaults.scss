@@ -4,14 +4,15 @@
 
 *
 **/
- $primaryColor:#353335;
- $secondaryColor:#898989;
+ $primaryColor:#1f1a1f;
+ $secondaryColor:#1f1a1f;
  $tertiaryColor:#ececec;
- $highlightColor:#bcd531;
+
+ $highlightColor:#b3d01e;
  $lightFontColor:white;
  $darkFontColor:#333;
- $white:#fafafa;
- $black:#353335;
+ $white:#ffffff;
+ $black:#1f1a1f;
  /**
  *
  * Spaces
@@ -25,6 +26,9 @@
  .background-color--primary {
      background-color:$primaryColor;
      color:$lightFontColor;
+     h1,h2,h3,h4,h5,h6{
+     	color:$lightFontColor
+     }
  }
  .background-color--secondary {
      background-color:$secondaryColor;

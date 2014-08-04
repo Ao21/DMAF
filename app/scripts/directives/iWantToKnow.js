@@ -11,7 +11,14 @@ app.directive('iWant', function($compile, $timeout, $compile) {
             },
 
             post: function(scope, element, attrs) {
+                scope.selectQuestions = function(e){
+                    angular.element(e.currentTarget).find('.questionsDropdown').addClass('open');
+                }
 
+                scope.closeQuestions = function(e){
+                    console.log(e.currentTarget.parentNode);
+                    angular.element(e.currentTarget).removeClass('open');
+                }
 
 
             }

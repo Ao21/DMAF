@@ -19,11 +19,11 @@
             <div class="menuSubContainer" ng-class="currentHover">
                 <div class="menuBlock it-{{item.links.length}}" id="labs0" ng-repeat="item in menuItems">
                     <ul>
-                        <li ng-repeat="links in item.links">
-                            <img class="svgInject menu--icons icon--{{links.icon}}" data-src="images/icons/menus/{{links.icon}}.svg" alt="">
+                        <li ng-repeat="links in item.links" ng-class="{ active: isActive('/'+links.link) }">
+                            <a href="#/{{links.link}}"><img class="svgInject menu--icons icon--{{links.icon}}" data-src="images/icons/menus/{{links.icon}}.svg" alt="">
                             <div class="linktext">
-                                <a href="#">{{links.title}}</a>
-                            </div>
+                                {{links.title}}
+                            </div></a>
 
                         </li>
                     </ul>

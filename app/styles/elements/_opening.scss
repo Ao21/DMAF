@@ -1,11 +1,12 @@
 .openinghours {
-    overflow:hidden;
+    overflow: hidden;
     .selector {
-        padding:$full-space 0px;
+        padding: $full-space 0px;
         h3 {
             font-weight: 200;
             line-height: 1;
             cursor: pointer;
+            color: $darkFontColor;
         }
         h3:hover {
             font-weight: 600;
@@ -15,38 +16,44 @@
         }
     }
     .row {
-        width:100%;
+        width: 100%;
         float: left;
     }
     .times {
-        padding:$full-space 0px;
+        padding: $full-space 0px;
         p {
             margin-bottom: 0;
             margin-right: 5px;
             padding-right: 5px;
+            margin-top: 5px;
         }
         .grid {
             .gridRow {
-                width:100%;
+                width: 100%;
                 float: left;
             }
             .topTitle {
-                width:100%;
+                width: 100%;
             }
             .title {
                 width: 125px;
                 text-align: right;
                 float: left;
+                strong {
+                    color: $darkFontColor;
+                }
             }
             .time {
                 float: left;
                 margin: 1px;
                 font-weight: 100;
                 text-align: right;
+                padding-top:5px;
                 font-size: 14px;
+                border-radius:3px;
                 &.active {
-                    background-color:$white;
-                    height: 20px;
+                    background-color: $white;
+                    height: 28px;
                 }
             }
         }
@@ -55,45 +62,48 @@
 @media only screen and (min-width: 1280px) {
     .openinghours {
         .selector {
-            width:180px;
+            width: 180px;
             float: left;
         }
         .times {
-            width:1000px;
+            width: 1100px;
             float: left;
-            padding:$full-space 0px;
+            padding: $full-space 0px;
             p {
                 margin-bottom: 0;
-                margin-right: 5px;
+                margin-right: 20px;
                 padding-right: 5px;
             }
             .grid {
                 .gridRow {
-                    height: 22px;
-                    width:100%;
+                    height: 30px;
+                    width: 100%;
                     float: left;
                 }
                 .topTitle {
-                    width:100%;
+                    width: 100%;
                 }
                 .title {
                     width: 200px;
                     text-align: right;
                     float: left;
+                    margin-right:20px;
                     strong {
-                        font-size:24px;
+                        font-size: 24px;
                     }
                 }
                 .time {
-                    width: 50px;
+                    width: 65px;
                     float: left;
                     margin: 1px;
-                    height: 25px;
+                    height: 28px;
                     font-weight: 100;
                     text-align: right;
                     font-size: 14px;
+
                     &.active {
-                        background-color:$white;
+                        background-color: $primaryColor;
+                        height: 28px;
                     }
                 }
             }
@@ -103,15 +113,15 @@
 @media only screen and (min-width: 960px) and (max-width: 1279px) {
     .openinghours {
         .selector {
-            width:100%;
+            width: 100%;
             h3 {
-                display:inline;
-                margin-right:$half-space;
+                display: inline;
+                margin-right: $half-space;
             }
         }
         .times {
-            width:100%;
-            padding:$full-space 0px;
+            width: 100%;
+            padding: $full-space 0px;
             p {
                 margin-bottom: 0;
                 margin-right: 5px;
@@ -119,28 +129,30 @@
             }
             .grid {
                 .gridRow {
-                    height: 25px;
-                    width:100%;
+                    height: 30px;
+                    width: 100%;
                     float: left;
                 }
                 .topTitle {
-                    width:100%;
+                    width: 100%;
                 }
                 .title {
                     width: 125px;
                     text-align: right;
                     float: left;
+                    margin-right:20px;
+
                 }
                 .time {
-                    width: 40px;
+                    width: 65px;
                     float: left;
                     margin: 1px;
-                    height: 20px;
+                    height: 28px;
                     font-weight: 100;
                     text-align: right;
                     font-size: 14px;
                     &.active {
-                        background-color:$white;
+                        background-color: $primaryColor;
                     }
                 }
             }
@@ -148,18 +160,17 @@
     }
 }
 /* Tablet Portrait size to standard 960 (devices and browsers) */
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
 /* All Mobile Sizes (devices and browser) */
- @media only screen and (max-width: 767px) {
-}
+
+@media only screen and (max-width: 767px) {}
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
- @media only screen and (max-width: 479px) {
-}
-@-webkit-keyframes enter_animation {
+
+@media only screen and (max-width: 479px) {}@-webkit-keyframes enter_animation {
     from {
         opacity:0;
     }
@@ -169,44 +180,44 @@
 }
 @keyframes enter_animation {
     from {
-        opacity:0;
+        opacity: 0;
     }
     to {
-        opacity:1;
+        opacity: 1;
     }
 }
 @-webkit-keyframes leave_animation {
     from {
-        opacity:1;
+        opacity: 1;
     }
     to {
-        opacity:0;
+        opacity: 0;
     }
 }
 @keyframes leave_animation {
     from {
-        opacity:1;
+        opacity: 1;
     }
     to {
-        opacity:0;
+        opacity: 0;
     }
 }
 .time-animation.ng-enter-stagger, .time-animation.ng-leave-stagger, .time-animation.ng-move-stagger {
     /* 200ms will be applied between each sucessive enter operation */
-    -webkit-transition-delay:0.1s;
-    transition-delay:0.1s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
 }
 .time-animation.ng-enter, .time-animation.ng-leave, .time-animation.ng-move {
-    -webkit-transition:0.1s linear all;
-    transition:0.1s linear all;
+    -webkit-transition: 0.1s linear all;
+    transition: 0.1s linear all;
 }
 .time-animation.ng-leave.ng-leave-active, .time-animation.ng-enter, .time-animation.ng-move {
-    -webkit-transition:0.1s linear all;
-    transition:0.1s linear all;
-    opacity:0;
-    line-height:0;
+    -webkit-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+    opacity: 0;
+    line-height: 0;
 }
 .time-animation.ng-leave, .time-animation.ng-move.ng-move-active, .time-animation.ng-enter.ng-enter-active {
-    opacity:1;
-    line-height:20px;
+    opacity: 1;
+    line-height: 20px;
 }
