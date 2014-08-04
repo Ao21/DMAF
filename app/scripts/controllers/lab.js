@@ -14,7 +14,7 @@ app.controller('LabCtrl', function($scope,$routeParams) {
 
 	if($routeParams.lab === 'digfab'){
 		$scope.machines = [
-		{name:'Tutorials & Templates', desc: 'Laser Cutting Templates Growing Library of Practical Tutorials Avaiable for download', img: 'digfab/digfab0.jpg', col:'252525', op:'0.24'},
+		{name:'Tutorials & Templates', desc: 'Laser Cutting Templates Growing Library of Practical Tutorials Avaiable for download', img: 'digfab/digfab0.jpg', col:'252525', op:'0.24', link:'tutorials'},
 		{name:'KUKA', desc: 'KUKA KR60-3 6-AXIS ROBOT', img: 'digfab/digfab1.jpg', col:'555555', op:'0.7', link:'kuka'},
 		{name:'Laser Cutters', desc: 'Trotec (Delta & Gamma) Universal (Alpha)', img: 'digfab/digfab2.jpg', col:'555555', op:'0.7', link:'lasercutters'},
 		{name:'3D Printers: Extruders', desc: 'Makerbot Replicator 2', img: 'digfab/digfab3.jpg', col:'555555', op:'0.4', link:'extruders'},

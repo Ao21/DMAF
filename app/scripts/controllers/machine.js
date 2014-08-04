@@ -14,6 +14,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 
 	/* Copy from Here */
 	if($routeParams.machine === 'lasercutters'){
+		/* routeparams = link in array in lab.js  */
 		$scope.label = "laser cutters";
 		$scope.gridRef = 'one-half';
 		$scope.bkimg = 'machines/laser/banner.jpg'
