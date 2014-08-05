@@ -82,7 +82,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -125,8 +125,8 @@
 						"selection":
 						[
 							[
-								755,
-								755
+								530,
+								549
 							]
 						],
 						"settings":
@@ -135,7 +135,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 66.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
