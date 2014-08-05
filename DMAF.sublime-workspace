@@ -19,7 +19,7 @@
 			"file": "app/scripts/controllers/machine.js",
 			"settings":
 			{
-				"buffer_size": 2530,
+				"buffer_size": 11292,
 				"line_ending": "Unix"
 			}
 		}
@@ -97,8 +97,8 @@
 						"selection":
 						[
 							[
-								516,
-								516
+								1021,
+								1021
 							]
 						],
 						"settings":
@@ -118,15 +118,15 @@
 					"file": "app/scripts/controllers/machine.js",
 					"settings":
 					{
-						"buffer_size": 2530,
+						"buffer_size": 11292,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								530,
-								549
+								11285,
+								0
 							]
 						],
 						"settings":

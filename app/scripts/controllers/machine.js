@@ -15,7 +15,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 	/* Copy from Here */
 	if($routeParams.machine === 'lasercutters'){
 		/* routeparams = link in array in lab.js  */
-		$scope.label = "laser cutters";
+		$scope.label = "Laser Cutters";
 		$scope.gridRef = 'one-half';
 		$scope.bkimg = 'machines/laser/banner.jpg'
 		$scope.machine = [{
@@ -229,6 +229,75 @@ Run by Enroute (2D) and Visual Mill software (3D), CNC machining allows for comp
 		$scope.description = "The Digital Fabrication Laboratory’s vacuum former uses heat and vacuum pressure to mold a melted sheet of plastic over a surface mold. Molds can be made from many materials depending on longevity required including plywood, card, composite, ceramics, plastics or alloys. Vacuum pressure is used to hold the melted plastic to the mold as temperature reduces, casting a plastic model.";
 		$scope.bookings = ['Remember that the object will need to be removed. Avoid undercuts','Use a draft angle of 3 degrees or more in the mold in order to avoid formed objects adhering to the mold.'];
 	
+		
+	}
+	/* To here */
+
+/* Copy from Here */
+	if($routeParams.machine === 'materials'){
+		/* routeparams = link in array in lab.js  */
+		$scope.label = "Materials";
+		$scope.gridRef = 'one-half'; /* remove columns */
+		$scope.bkimg = 'machines/laser/banner.jpg' 
+		$scope.machine = [{
+			name:'Vacuum Former',/* remove  */
+			subname: '686PT',/* remove  */
+			brand: 'Formech',/* remove  */
+			bedSize: 'TBA',/* remove  */
+			cost:'Free machine use',/* remove  */
+			costDesc:'PETG vacuum forming sheets available to purchase from DMaF',/* remove  */
+			downloads:[{
+				name:'Guide', /* add link to guide here */
+				link:''
+			},{
+				name:'Rhino', /* no template link needed */
+				link:''
+			}]
+		},{
+			name:'Universal Laser Cutter', /* remove from here */
+			subname: 'Alpha',
+			brand: 'Universal 120W',
+			bedSize: '810x450mm',
+			cost:'$15.00 per 30 Minutes*',
+			costDesc:'',
+			downloads:[{
+				name:'Guide',
+				link:''
+			},{
+				name:'Rhino',
+				link:'' /* To here */
+			}]
+		}];
+
+		$scope.description = "Due to the wide capabilities of the DMaF, the Centre is able to purchase a large range of materials and offer these at reduced prices to students, staff and collaborators. These include:
+•	Solid timbers in a variety of species
+•	Composite boards such as plywood, Masonite, Alucobond and chipboard in varying thicknesses and sheet sizes
+•	Sheet metals and alloys, metal and aluminium tubes, rods, bars and extrusions
+•	Perspex / Acrylic sheets and rods
+•	Polypropylene
+•	Boxboard, screen board, corrugated cardboard, foam core
+•	Extruded and expanded foam
+•	Tool kits
+•	Casting products
+•	Printmaking essentials
+•	Solder products
+Where possible, materials are cut-to-size for the most appropriate, efficient and economical use on Digital Fabrication machines in the DMaF Labs. The Centre is also dedicated to the responsible use, reuse and disposal of material. As such, a large array of reusable materials are available for free throughout the workshops. We ask that all students be sympathetic to the environment when using materials throughout the DMaF Lab, ensuring objects are “nested” efficiently and recycling all materials where possible. Please also note that RhinoNEST software is available in DMaF Lab and Computer Lab 526.
+The DMaF Lab is continually adding to this large range of materials, experimenting with new uses and methods of fabrication and engaging in a diverse range of investigation into materiality, expression and construction technique at all stages of the design process.";
+$scope.description = "DMaF Toolkits have arrived! Our kits are small enough to transport between workspaces and large enough to fit the essentials. A carefully selected range of useful tools handily boxed up to provide you with a mobile tool kit. 
+$60 per Tool Kit. DMaF have subsidized the contents of the toolkit to bring you a cheaper than cost price box full of the essentails:
+• Mini Cut Plyers
+• Mini Long Nose Plyers
+• Happer
+• Precision Screwdriver Set
+• Junior Hacksaw
+• Square
+• Craft Knife
+• Tape Measure
+• Screwdriver Set
+• Safety Goggles
+• Comes in a Tool Box"
+$scope.description = "Payment are accepted via use of USYD’s Unikey account (Extro account), which can be topped up via this link (http://sydney.edu.au/ict/student/unikey/recharge-account.shtml), the DMaF Lab staff will then access these funds via our payment terminals.  Please ensure your account is topped up prior to your booking."	
+
 		
 	}
 	/* To here */
