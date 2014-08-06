@@ -19,7 +19,7 @@
 			"file": "app/scripts/controllers/machine.js",
 			"settings":
 			{
-				"buffer_size": 11292,
+				"buffer_size": 14724,
 				"line_ending": "Unix"
 			}
 		}
@@ -97,8 +97,8 @@
 						"selection":
 						[
 							[
-								1021,
-								1021
+								1537,
+								1537
 							]
 						],
 						"settings":
@@ -118,15 +118,15 @@
 					"file": "app/scripts/controllers/machine.js",
 					"settings":
 					{
-						"buffer_size": 11292,
+						"buffer_size": 14724,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11285,
-								0
+								0,
+								14724
 							]
 						],
 						"settings":
@@ -134,8 +134,8 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 28.0,
+						"translation.y": 434.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

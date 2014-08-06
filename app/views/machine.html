@@ -40,13 +40,23 @@
 
     </div>
 </div>
+
+
 <div class="container push-double--ends">
     <p>{{description}}</p>
-    <h1 class="text--light" style="color:#00aef0">Materials Allowed</h1>
-    <p>{{materialsAllowed}}</p>
-    <h1 class="text--light" style="color:#ec135b">Don't Use</h1>
-    <p>{{materialsDisallowed}}</p>
-</div>
+
+    <div style="width:48%; float:left; padding-right:2%; position:relative">
+        <h3 class="text--light" style="color:#309d58"><img src="{{allowedicon}}"/>{{allowedHeader}}</h3>
+        <p>{{materialsAllowed}}</p>
+
+    </div>  
+    <div style="width:48%; float:left; padding-right:2%; position:relative">  
+        <h3 class="text--light" style="color:#c53b48"><img src="{{disallowedicon}}"/>{{disallowedHeader}}</h3>
+        <p>{{materialsDisallowed}}</p>
+    </div>
+
+</div> 
+
 <div class="background-color--primary">
     <div class="container soft-double--ends">
         <h1 class="text--light large push--bottom">Want to make a booking?</h1>
