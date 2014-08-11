@@ -1,6 +1,7 @@
 <div class="container--wide-small background-color--primary machines__header" style="">
     <div class="container">
-        <h1>machines & equipment: {{label}}</h1>
+        <h1 ng-show="showExtras">machines & equipment: {{label}}</h1>
+        <h1 ng-show="!showExtras">{{label}}</h1>
     </div>
 </div>
 
@@ -18,7 +19,7 @@
                     <h4 class="push-half--bottom">{{item.subname}}</h4>
                     <table>
                         <tbody>
-                            <tr>
+                            <tr ng-show="{{item.brand.length}}">
                                 <td><strong>Brand:</strong></td>
                                 <td>{{item.brand}}</td>
                             </tr>
@@ -32,8 +33,8 @@
                             </tr>
                         </tbody>
                     </table>
-                    <h4 class="push-double--top">DOWNLOADS</h4>
-
+                    <h4 ng-show="{{item.downloads.length}}" class="push-double--top">DOWNLOADS</h4>
+                    <p ng-show="!showExtras" ng-bind-html="description"></p>
                 </div>
             </div>
         </div>
@@ -43,28 +44,27 @@
 
 
 <div class="container push-double--ends">
-    <p>{{description}}</p>
+    <p ng-show="showExtras">{{description}}</p>
 
     <div style="width:48%; float:left; padding-right:2%; position:relative">
         <h3 class="text--light" style="color:#309d58"><img src="{{allowedicon}}"/>{{allowedHeader}}</h3>
         <p>{{materialsAllowed}}</p>
 
     </div>  
-    <div style="width:48%; float:left; padding-right:2%; position:relative">  
+    <div ng-show="{{disallowedHeader.length}}" style="width:48%; float:left; padding-right:2%; position:relative">  
         <h3 class="text--light" style="color:#c53b48"><img src="{{disallowedicon}}"/>{{disallowedHeader}}</h3>
         <p>{{materialsDisallowed}}</p>
     </div>
 
 </div> 
 
-<div class="background-color--primary">
+<div ng-show="{{bookings.length}}" class="background-color--primary">
     <div class="container soft-double--ends">
-        <h1 class="text--light large push--bottom">Want to make a booking?</h1>
+        <h1 class="text--light large push--bottom">Before you book</h1>
         <ul class="bookings">
             <li ng-repeat="p in bookings">{{p}}</li>
         </ul>
-        <h1 class="large text--light text--center push-double--ends">Got all that?</h1>
-        <h1 class="text--light text--center">Yes | No</h1>
+        <h1 class="text--light text--center">Book this machine</h1>
 
     </div>
 </div>

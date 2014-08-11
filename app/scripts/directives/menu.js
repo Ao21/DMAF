@@ -61,9 +61,27 @@ app.directive('menu', function($compile, $timeout,$location) {
                         title: 'Access'
                     }]
                 }, {
-                    section: 'Media & Events'
+                    section: 'Media & Events',
+                    links: [{
+                        icon:'sicu',
+                        link:'media-1',
+                        title:'Media'
+                    },{
+                        icon:'laser',
+                        link:'media-2',
+                        title:'Find us on Facebook'
+                    }]
                 }, {
-                    section: 'People & Contacts'
+                    section: 'People & Contacts',
+                    links: [{
+                        icon:'sicu',
+                        link:'lab/people',
+                        title:'Our people'
+                    },{
+                        icon:'laser',
+                        link:'contacts',
+                        title:'Contacts'
+                    }]
                 }]
             },
             post: function postLink(scope, iElement, iAttrs, controller) {

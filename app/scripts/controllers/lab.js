@@ -28,10 +28,17 @@ app.controller('LabCtrl', function($scope,$routeParams) {
 	}
 	if($routeParams.lab === 'metal'){
 		$scope.machines = [
-		{name:'Level 1 Machines', desc: 'Laser Cutting Templates Growing Library of Practical Tutorials Avaiable for download', img: 'digfab/digfab0.jpg', col:'252525', op:'0.24', link:'tutorials'},
-		{name:'KUKA', desc: 'KUKA KR60-3 6-AXIS ROBOT', img: 'digfab/digfab1.jpg', col:'555555', op:'0.7', link:'kuka'},
-		{name:'Laser Cutters', desc: 'Trotec (Delta & Gamma) Universal (Alpha)', img: 'digfab/digfab2.jpg', col:'555555', op:'0.7', link:'lasercutters'},
+		{name:'Level 1 Machines', desc: 'Access: SICU completion', img: 'digfab/digfab0.jpg', col:'252525', op:'0.24', link:'metal-level1'},
+		{name:'Level 2, 3 & 4 Machines', desc: 'Access: SICU completion & Individual Machine Induction', img: 'digfab/digfab1.jpg', col:'555555', op:'0.7', link:'metal-level234'},
+		{name:'Materials', desc: '', img: 'digfab/digfab2.jpg', col:'555555', op:'0.7', link:'materials'},
 		
+		]
+	}
+
+
+
+	if($routeParams.lab === 'people'){
+		$scope.machines = [		
 		]
 	}
     

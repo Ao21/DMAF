@@ -37,6 +37,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 				link:''
 			}]
 		}];
+		$scope.showExtras = true;
 
 		$scope.description = "";
 		$scope.allowedHeader = "";
@@ -325,8 +326,9 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 				link:''
 			}]
 		}];
+		$scope.showExtras = true;
 
-		$scope.description = "Due to the wide capabilities of the DMaF, the Centre is able to purchase a large range of materials and offer these at reduced prices to students, staff and collaborators. These include:\n" + ['1\n','2\n','3\n'] + "Where possible, materials are cut-to-size for the most appropriate, efficient and economical use on Digital Fabrication machines in the DMaF Labs. The Centre is also dedicated to the responsible use, reuse and disposal of material. As such, a large array of reusable materials are available for free throughout the workshops. We ask that all students be sympathetic to the environment when using materials throughout the DMaF Lab, ensuring objects are “nested” efficiently and recycling all materials where possible. Please also note that RhinoNEST software is available in DMaF Lab and Computer Lab 526. The DMaF Lab is continually adding to this large range of materials, experimenting with new uses and methods of fabrication and engaging in a diverse range of investigation into materiality, expression and construction technique at all stages of the design process.";
+		$scope.description = "Due to the wide capabilities of the DMaF, the Centre is able to purchase a large range of materials and offer these at reduced prices to students, staff and collaborators. These include:\n" + "Where possible, materials are cut-to-size for the most appropriate, efficient and economical use on Digital Fabrication machines in the DMaF Labs. The Centre is also dedicated to the responsible use, reuse and disposal of material. As such, a large array of reusable materials are available for free throughout the workshops. We ask that all students be sympathetic to the environment when using materials throughout the DMaF Lab, ensuring objects are “nested” efficiently and recycling all materials where possible. Please also note that RhinoNEST software is available in DMaF Lab and Computer Lab 526. The DMaF Lab is continually adding to this large range of materials, experimenting with new uses and methods of fabrication and engaging in a diverse range of investigation into materiality, expression and construction technique at all stages of the design process.";
 		$scope.allowedicon = 'icons/materials/materials-allowed.jpg';
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
@@ -338,6 +340,164 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 		$scope.bookingsReady = "";
 	}
 	/* To here */
+
+
+
+
+
+
+/* Copy from Here */
+	/****** METAL | LEVEL 1 MACHINES ******/
+
+	if($routeParams.machine === 'metal-level1'){
+		/* routeparams = link in array in lab.js  */
+		$scope.label = "level 1 equipment";
+		$scope.gridRef = 'one';
+		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.machine = [{
+			name:'Level 1 Equipment',
+			subname: '',
+			brand: '',
+			bedSize: '',
+			cost:'',
+			costDesc:'',
+			
+		}];
+		$scope.showExtras = false;
+
+		$scope.description = '<p>Successful completion of SICU (Safety Induction and Competency Unit) required prior to Level 1 machine use. SICU, run intensively at the beginning of each academic semester, offers a comprehensive introduction to all Level 1 equipment throughout the whole DMaF Lab.</p><p>Level 1 Metalastics equipment:</p><ul><li>•	Portable spot welders</li></ul>';
+		$scope.allowedicon = '';
+		$scope.allowedHeader = "";
+		$scope.materialsAllowed = "";
+		$scope.disallowedicon = '';
+		$scope.disallowedHeader = "";
+		$scope.materialsDisallowed = "";
+		$scope.bookingsReady = "";	}
+	/* To here */
+
+
+
+/* Copy from Here */
+	/****** METAL | LEVEL 2,3 & 4 MACHINES ******/
+
+	if($routeParams.machine === 'metal-level234'){
+		/* routeparams = link in array in lab.js  */
+		$scope.label = "Level 2, 3 & 4 Equipment";
+		$scope.gridRef = 'one';
+		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.machine = [{
+			name:'Level 2, 3 & 4 Equipment',
+			subname: '',
+			brand: '',
+			bedSize: '',
+			cost:'',
+			costDesc:'',
+			downloads:[{
+				name:'Guide',
+				link:''
+			},{
+				name:'Rhino',
+				link:''
+			}]
+		}];
+
+		$scope.description = "Access to Level 2, Level 3 and Level 4 equipment is gained after successful completion of the Safety Induction and Competency Unit (SICU) as well as a Machine Specific Induction for the particular higher-level machine that you would like to use. Please speak to DMaF staff to arrange a Machine Specific Induction. Level 2 equipment: •	English wheel •	Perspex Bender • Fixed spot welder • Cold saw • Soldering irons • Bench grinders • Fly press (cutting & stamping) Level 3 equipment: • Electric hacksaw • Large drill press • Small lathe • Motorized guillotine Level 4 equipment: • Large lathe • Mill • CNC Tormech";
+		$scope.allowedicon = '';
+		$scope.allowedHeader = "";
+		$scope.materialsAllowed = "";
+		$scope.disallowedicon = '';
+		$scope.disallowedHeader = "";
+		$scope.materialsDisallowed = "";
+		$scope.bookings = [];
+		$scope.bookingsReady = "";	}
+	/* To here */
+
+
+
+
+/* Copy from Here */
+	/****** METAL | LEVEL 2,3 & 4 MACHINES ******/
+
+	if($routeParams.machine === 'metal-materials'){
+		/* routeparams = link in array in lab.js  */
+		$scope.label = "materials";
+		$scope.gridRef = 'one';
+		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.machine = [{
+			name:'materials',
+			subname: '',
+			brand: '',
+			bedSize: '',
+			cost:'',
+			costDesc:'',
+			downloads:[{
+				name:'Guide',
+				link:''
+			},{
+				name:'Rhino',
+				link:''
+			}]
+		}];
+
+		$scope.description = "Access to Level 2, Level 3 and Level 4 equipment is gained after successful completion of the Safety Induction and Competency Unit (SICU) as well as a Machine Specific Induction for the particular higher-level machine that you would like to use. Please speak to DMaF staff to arrange a Machine Specific Induction. Level 2 equipment: •	English wheel •	Perspex Bender • Fixed spot welder • Cold saw • Soldering irons • Bench grinders • Fly press (cutting & stamping) Level 3 equipment: • Electric hacksaw • Large drill press • Small lathe • Motorized guillotine Level 4 equipment: • Large lathe • Mill • CNC Tormech";
+		$scope.allowedicon = '';
+		$scope.allowedHeader = "";
+		$scope.materialsAllowed = "";
+		$scope.disallowedicon = '';
+		$scope.disallowedHeader = "";
+		$scope.materialsDisallowed = "";
+		$scope.bookings = [];
+		$scope.bookingsReady = "";	}
+	/* To here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Copy from Here */
+	/****** PEOPLE & CONTACTS ******/
+
+	if($routeParams.machine === 'people'){
+		/* routeparams = link in array in lab.js  */
+		$scope.label = "people";
+		$scope.gridRef = 'one';
+		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.machine = [{
+			name:'Vacuum Former',
+			subname: '686PT',
+			brand: 'Formech',
+			bedSize: 'TBA',
+			cost:'Free machine use',
+			costDesc:'PETG vacuum forming sheets available to purchase from DMaF',
+			downloads:[{
+				name:'Guide',
+				link:''
+			},{
+				name:'Rhino',
+				link:''
+			}]
+		}];
+
+		$scope.description = "The Digital Fabrication Laboratory’s vacuum former uses heat and vacuum pressure to mold a melted sheet of plastic over a surface mold. Molds can be made from many materials depending on longevity required including plywood, card, composite, ceramics, plastics or alloys. Vacuum pressure is used to hold the melted plastic to the mold as temperature reduces, casting a plastic model.";
+		$scope.allowedicon = '';
+		$scope.allowedHeader = "";
+		$scope.materialsAllowed = "";
+		$scope.disallowedicon = '';
+		$scope.disallowedHeader = "";
+		$scope.materialsDisallowed = "";
+		$scope.bookings = ['Remember that the object will need to be removed. Avoid undercuts','Use a draft angle of 3 degrees or more in the mold in order to avoid formed objects adhering to the mold.'];
+		$scope.bookingsReady = "";	}
+	/* To here */
+
 
 	
 });
