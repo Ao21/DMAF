@@ -111,7 +111,7 @@
         }
         .menuBlock {
             float: left;
-            min-height: 330px;
+            min-height: 200px;
             ul {
                 width: 1280px;
                 margin: 0 auto;
@@ -119,12 +119,12 @@
             li {
                 position: relative;
               width: 320px;
-              height: 245px;
+              height: 185px;
               float: left;
                 .linktext {
                     position: absolute;
                     bottom: 0;
-                    font-size: 24px;
+                    font-size: 20px;
                     text-align: left;
                     width: 230px;
                     height: 50px;
@@ -148,8 +148,8 @@
         .menu--icons {
             float: left;
               transition: all 0.3s;
-              max-height: 155px;
-              margin-top: 40px;
+              max-height: 105px;
+              margin-top: 20px;
               margin-left: 30px;
               width: 160px;
             svg { 
