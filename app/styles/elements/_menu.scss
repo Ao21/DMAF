@@ -118,9 +118,9 @@
             }
             li {
                 position: relative;
-                width: 320px;
-                height: 300px;
-                float: left;
+              width: 320px;
+              height: 245px;
+              float: left;
                 .linktext {
                     position: absolute;
                     bottom: 0;
@@ -147,10 +147,14 @@
         }
         .menu--icons {
             float: left;
-            transition: all 0.3s;
-            max-height: 155px;
-            margin-top: 80px;
-            margin-left: 30px;
+              transition: all 0.3s;
+              max-height: 155px;
+              margin-top: 40px;
+              margin-left: 30px;
+              width: 160px;
+            svg { 
+                width:180px;
+            }
             * {
                 transition: all 0.3s;
                 stroke: $primaryColor;
@@ -160,7 +164,8 @@
             .menu--icons {
                 transform: scale(1.1);
                 * {
-                    stroke: $highlightColor;
+                    fill:$highlightColor;
+                    stroke: none;
                 }
             }
         }

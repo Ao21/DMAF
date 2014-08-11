@@ -42,15 +42,15 @@ app.directive('menu', function($compile, $timeout,$location) {
                 }, {
                     section: 'Inductions & Access',
                     links: [{
-                        icon:'SICU',
+                        icon:'sicu',
                         link:'sicu',
                         title:'SICU Safety Induction and Competency Unit'
                     },{
-                        icon:'laserCutting',
+                        icon:'laser',
                         link:'laserCutting',
                         title:'Laser Cutting Inductions'
                     },{
-                        icon: '3dPrinting',
+                        icon: '3d',
                         link: '3dprinting',
                         title: '3D printing Inductions'
                     },
