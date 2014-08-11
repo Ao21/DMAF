@@ -14,7 +14,6 @@ app.directive('menu', function($compile, $timeout,$location) {
                     }, {
                         icon: 'metalastics',
                         link: 'lab/metal',
-
                         title: 'metalastics lab'
                     }, {
                         icon: 'timber',
