@@ -1,20 +1,15 @@
-<div class="container push--ends">
+<div class="container labBlurb push--ends">
     <p>{{blurb}} <a ng-show="!showBlurb" ng-click="showBlurb = true" href="">Want to know more?</a>
     </p>
-    <div ng-show="showBlurb" class="" style="">
-    <p>{{blurbExpanded}}</p>
+    <div ng-show="showBlurb" class="" style="" ng-bind-html="blurbExpanded"> 
     </div>
 </div>
 
 <div class="container--wide-small background-color--primary machines__header" style="">
-    <div class="">
-        <h1>machines & equipment</h1>
+    <div class="container">
+        <h2>machines & equipment</h2>
     </div>
 </div>
-
-
-
-
 
 
 

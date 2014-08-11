@@ -1,10 +1,10 @@
 .machines__header {
     position: relative;
-    h1 {
-        margin-left: 24px;
+    h1,h2 {
+        margin-left: 0;
         color: white;
         font-weight: 200;
-        padding-top: 60px;
+        padding-top: 75px;
     }
 }
 .grid {
@@ -38,6 +38,9 @@
 }
 .one-third {
     width: 33.3333%;
+}
+.two-thirds {
+    width: 66.6666%;
 }
 .one-half {
     width: 50%;

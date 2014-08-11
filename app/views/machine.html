@@ -1,7 +1,7 @@
 <div class="container--wide-small background-color--primary machines__header" style="">
     <div class="container">
-        <h1 ng-show="showExtras">machines & equipment: {{label}}</h1>
-        <h1 ng-show="!showExtras">{{label}}</h1>
+        <h2 ng-show="showExtras">machines & equipment: {{label}}</h2>
+        <h2 ng-show="!showExtras">{{label}}</h2>
     </div>
 </div>
 
@@ -79,9 +79,10 @@
 </div>
 <div ng-show="bookingsOpen" class="animate-show-down background-color--primary">
     <div class="container soft-double--ends">
+        <p ng-bind-html="bookingsReady"></p>
         <div ng-repeat="items in bookingsUrl">
-        <h3>Laser Cutter {{items.name}}</h3>
-        <iframe class="push--bottom" style="background-color:#fafafa" width='100%' height='270' scrolling='auto' frameborder='0' ng-src=' {{items.url}}'></iframe>
+            <h3>Laser Cutter {{items.name}}</h3>
+            <iframe class="push--bottom" style="background-color:#fafafa" width='100%' height='270' scrolling='auto' frameborder='0' ng-src=' {{items.url}}'></iframe>
         </div>
        
 
