@@ -14,7 +14,6 @@ app.directive('menu', function($compile, $timeout,$location) {
                     }, {
                         icon: 'metalastics',
                         link: 'lab/metal',
-
                         title: 'metalastics lab'
                     }, {
                         icon: 'timber',
@@ -43,6 +42,7 @@ app.directive('menu', function($compile, $timeout,$location) {
                 }, {
                     section: 'Inductions & Access',
                     links: [{
+<<<<<<< HEAD
                         icon:'SICU',
                         link:'sicu',
                         title:'SICU Safety Induction and Competency Unit'
@@ -59,6 +59,23 @@ app.directive('menu', function($compile, $timeout,$location) {
                         icon: 'access',
                         link: 'access',
                         title: 'Access'
+=======
+                        icon: 'sicu',
+                        link: 'lab/sicu',
+                        title: 'safety and competency unit'
+                    }, {
+                        icon: 'laser',
+                        link: 'lab/laser',
+                        title: 'laser cutting inductions'
+                    }, {
+                        icon: '3d',
+                        link: 'lab/3d',
+                        title: '3d printing inductions'
+                    }, {
+                        icon: 'access',
+                        link: 'lab/access',
+                        title: 'access'
+>>>>>>> 6296a054b9c90a8272203cd58000ee44dd96c122
                     }]
                 }, {
                     section: 'Media & Events'
