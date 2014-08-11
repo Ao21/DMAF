@@ -171,7 +171,7 @@
         .menuContainer {
             .container {
                 overflow: hidden;
-                height: 330px;
+                height: 220px;
             }
             .menuSubContainer {
                 width:1280*6px;
@@ -186,8 +186,13 @@
                 }
                 li {
                     width: 320px;
+<<<<<<< HEAD
                     height: 280px;
                     //padding-left:75px;
+=======
+                    height: 200px;
+                    padding-left:75px;
+>>>>>>> 6296a054b9c90a8272203cd58000ee44dd96c122
                     float: left;
                     .linktext {
                         position: absolute;
@@ -199,8 +204,63 @@
                     }
                 }
                 &.it-3 {
+<<<<<<< HEAD
                     ul{
                        width:960px; 
+=======
+                    margin-left:140px;
+                }
+            }
+            .menu--icons {
+                float: left;
+                max-height: 100px;
+                margin-top: 30px;
+                
+            }
+        }
+    }
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+    .menu {
+        .menuContainer {
+            .container {
+                overflow: hidden;
+                height: 330px;
+            }
+            .menuSubContainer {
+                width:960*6px;
+                transition: all 1s 0s;
+            }
+            .menuSubContainer.pos0 {
+                transform:translateX(0);
+            }
+            .menuSubContainer.pos1 {
+                transform:translateX(-960px);
+            }
+            .menuSubContainer.pos2 {
+                transform:translateX(-960px*2);
+            }
+            .menuSubContainer.pos3 {
+                transform:translateX(-960px*3);
+            }
+            .menuSubContainer.pos4 {
+                transform:translateX(-960px*4);
+            }
+            .menuBlock {
+                min-height: 330px;
+                li {
+                    width: 245px;
+                    height: 258px;
+                    padding-left:55px;
+                    float: left;
+                    .linktext {
+                        position: absolute;
+                        bottom: 0;
+                        left: 35%;
+                        font-size: 24px;
+                        width: 150px;
+                        height: 50px;
+>>>>>>> 6296a054b9c90a8272203cd58000ee44dd96c122
                     }
                     
                     //margin-left:140px;

@@ -2,28 +2,28 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="147.4px" height="136.06px" viewBox="0 0 147.4 136.06" enable-background="new 0 0 147.4 136.06" xml:space="preserve">
+	 width="141.73px" height="136.06px" viewBox="0 0 141.73 136.06" enable-background="new 0 0 141.73 136.06" xml:space="preserve">
 <g>
 	
-		<rect x="4.346" y="1" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="138.641" height="134"/>
-	<polygon fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" points="133.125,94.24 
-		13.047,94.24 13.156,77.897 17.075,67.428 127.358,67.428 133.15,82.777 	"/>
+		<rect x="1.346" y="1" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="138.641" height="134"/>
+	<polygon fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" points="130.125,94.24 
+		10.047,94.24 10.156,77.897 14.075,67.428 124.358,67.428 130.15,82.777 	"/>
 	<g>
-		<polyline fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" points="64.033,9.62 
-			64.033,22.985 78.419,22.985 78.419,9.62 		"/>
-		<polyline fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" points="65.038,22.904 
-			71.226,30.019 77.414,22.904 		"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" d="M65.038,22.904c0,0,1.263,1.671,6.188,1.671s6.188-1.671,6.188-1.671"/>
+		<polyline fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" points="61.033,9.62 
+			61.033,22.985 75.419,22.985 75.419,9.62 		"/>
+		<polyline fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" points="62.038,22.904 
+			68.226,30.019 74.414,22.904 		"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M62.038,22.904c0,0,1.263,1.671,6.188,1.671s6.188-1.671,6.188-1.671"/>
 	</g>
-	<polygon fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" points="133.125,107.156 
-		78.598,107.156 70.477,124.559 13.048,124.559 13.048,9.701 133.125,9.701 	"/>
+	<polygon fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" points="130.125,107.156 
+		75.598,107.156 67.477,124.559 10.048,124.559 10.048,9.701 130.125,9.701 	"/>
 	
-		<rect x="119.783" y="116.728" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" width="12.762" height="8.121"/>
+		<rect x="116.783" y="116.728" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" width="12.762" height="8.121"/>
 	
-		<rect x="109.342" y="116.728" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" width="6.381" height="8.121"/>
+		<rect x="106.342" y="116.728" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" width="6.381" height="8.121"/>
 </g>
-<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="71.167" y1="29.75" x2="71.167" y2="42.5"/>
-<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M84,77.115
-	c0,0-10.91,8.208-25.768,0c0-4.883,0-31.586,0-31.586H84V77.115z"/>
-<ellipse fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="71.116" cy="45.734" rx="12.884" ry="3.067"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="68.167" y1="29.75" x2="68.167" y2="42.5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M81,77.115
+	c0,0-10.91,8.208-25.768,0c0-4.883,0-31.586,0-31.586H81V77.115z"/>
+<ellipse fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="68.116" cy="45.734" rx="12.884" ry="3.067"/>
 </svg>
