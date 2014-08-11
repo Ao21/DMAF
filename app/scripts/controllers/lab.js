@@ -26,7 +26,7 @@ app.controller('LabCtrl', function($scope,$routeParams) {
 
 		]
 		$scope.blurb = "Enabling the rapid and accurate production of prototypes and finished designs and extensive research opportunities in robotics, advanced fabrication through computation and material properties.";
-		$scope.blurbExpanded ="";
+		$scope.blurbExpanded ="Blah";
 	}
 	if($routeParams.lab === 'metal'){
 		$scope.machines = [

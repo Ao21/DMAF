@@ -54,12 +54,12 @@
         </div>
     </div>
 
-    <div style="width:48%; float:left; padding-right:2%; position:relative">
+    <div ng-show="materialsAllowed.length" style="width:48%; float:left; padding-right:2%; position:relative">
         <h3 class="text--light" style="color:#309d58"><img src="{{allowedicon}}"/>{{allowedHeader}}</h3>
         <p>{{materialsAllowed}}</p>
 
     </div>  
-    <div ng-show="{{disallowedHeader.length}}" style="width:48%; float:left; padding-right:2%; position:relative">  
+    <div ng-show="disallowedHeader.length" style="width:48%; float:left; padding-right:2%; position:relative">  
         <h3 class="text--light" style="color:#c53b48"><img src="{{disallowedicon}}"/>{{disallowedHeader}}</h3>
         <p>{{materialsDisallowed}}</p>
     </div>
@@ -72,9 +72,7 @@
         <ul class="bookings">
             <li ng-repeat="p in bookings">{{p}}</li>
         </ul>
-        <h1 ng-hide="check" class="large  text--light text--center push-double--ends">Got all that?</h1>
-        <h1 ng-show="check" class="large text--light text--center push-double--ends">Book this machine</h1>
-        <h1 class="text--light text--center"><span ng-click="bookingsOpen=true" ng-mouseover="check=true" ng-mouseout="check=false"><a href="">Yes</a></span> | No</h1>
+        <a ><h2 ng-click="bookingsOpen=true" class="large text--light text--center push-double--ends">Book this machine</h2></a>
 
 
     </div>

@@ -1,8 +1,8 @@
-<div class="container push-double--ends">
-    <p>{{scope.blurb}} <a href="">Want to know more?</a>
+<div class="container push--ends">
+    <p>{{blurb}} <a ng-show="!showBlurb" ng-click="showBlurb = true" href="">Want to know more?</a>
     </p>
-    <div class="hidden" style="display:none">
-    <p>{{scope.blurbExpanded}}</p>
+    <div ng-show="showBlurb" class="" style="">
+    <p>{{blurbExpanded}}</p>
     </div>
 </div>
 
