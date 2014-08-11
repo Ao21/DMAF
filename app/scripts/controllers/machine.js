@@ -315,7 +315,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "materials";
 		$scope.gridRef = 'one';
-		$scope.bkimg = 'machines/laser/banner.jpg';
+		$scope.bkimg = 'labs/materials.jpg';
 		$scope.machine = [{
 			name:'',
 			subname: '',
@@ -350,7 +350,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "level 1 equipment";
 		$scope.gridRef = 'one';
-		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.bkimg = 'machines/metal-level1/banner.jpg';
 		$scope.machine = [{
 			name:'',
 			subname: '',
@@ -381,7 +381,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "Level 2, 3 & 4 Equipment";
 		$scope.gridRef = 'one';
-		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.bkimg = 'machines/metal-level234/banner.jpg';
 		$scope.machine = [{
 			name:'',
 			subname: '',
@@ -407,13 +407,13 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 
 
 /* Copy from Here */
-	/****** METAL | LEVEL 2,3 & 4 MACHINES ******/
+	/****** METAL | MATERIALS ******/
 
 	if($routeParams.machine === 'metal-materials'){
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "materials";
 		$scope.gridRef = 'one';
-		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.bkimg = '';
 		$scope.machine = [{
 			name:'materials',
 			subname: '',
@@ -453,7 +453,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "level 1 equipment";
 		$scope.gridRef = 'one';
-		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.bkimg = 'machines/timber-level1/banner.jpg';
 		$scope.machine = [{
 			name:'',
 			subname: '',
@@ -484,7 +484,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "Level 2, 3 & 4 Equipment";
 		$scope.gridRef = 'one';
-		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.bkimg = 'machines/timber-level234/banner.jpg';
 		$scope.machine = [{
 			name:'',
 			subname: '',

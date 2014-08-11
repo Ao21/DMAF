@@ -30,18 +30,18 @@ app.controller('LabCtrl', function($scope,$routeParams) {
 	}
 	if($routeParams.lab === 'metal'){
 		$scope.machines = [
-		{name:'Level 1 equipment', desc: 'Access: SICU completion', img: 'digfab/digfab0.jpg', col:'252525', op:'0.24', link:'metal-level1'},
-		{name:'Level 2, Level 3 & Level 4 equipment', desc: 'Access: SICU completion & Individual Machine Induction', img: 'digfab/digfab1.jpg', col:'555555', op:'0.7', link:'metal-level234'},
-		{name:'Materials', desc: '', img: 'digfab/digfab2.jpg', col:'555555', op:'0.7', link:'materials'},
+		{name:'Level 1 equipment', desc: 'Access: SICU completion', img: 'metal/metal0.jpg', col:'252525', op:'0.24', link:'metal-level1'},
+		{name:'Level 2, Level 3 & Level 4 equipment', desc: 'Access: SICU completion & Individual Machine Induction', img: 'metal/metal1.jpg', col:'555555', op:'0.7', link:'metal-level234'},
+		{name:'Materials', desc: '', img: 'metal/metal2.jpg', col:'555555', op:'0.7', link:'materials'},
 		
 		]
 	}
 
 	if($routeParams.lab === 'timber'){
 		$scope.machines = [
-		{name:'Level 1 equipment', desc: 'Access: SICU completion', img: 'digfab/digfab0.jpg', col:'252525', op:'0.24', link:'timber-level1'},
-		{name:'Level 2, Level 3 & Level 4 equipment', desc: 'Access: SICU completion & Individual Machine Induction', img: 'digfab/digfab1.jpg', col:'555555', op:'0.7', link:'timber-level234'},
-		{name:'Materials', desc: '', img: 'digfab/digfab2.jpg', col:'555555', op:'0.7', link:'materials'},
+		{name:'Level 1 equipment', desc: 'Access: SICU completion', img: 'timber/timber0.jpg', col:'252525', op:'0.24', link:'timber-level1'},
+		{name:'Level 2, Level 3 & Level 4 equipment', desc: 'Access: SICU completion & Individual Machine Induction', img: 'timber/timber1.jpg', col:'555555', op:'0.7', link:'timber-level234'},
+		{name:'Materials', desc: '', img: 'timber/timber2.jpg', col:'555555', op:'0.7', link:'materials'},
 		
 		]
 	}
