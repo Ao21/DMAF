@@ -102,25 +102,24 @@
 }
 
 
-.animate-hide {
-  -webkit-transition:all linear 0.5s;
-  transition:all linear 0.5s;
+.animate-show-down {
+ 
+  height: 100%;
   opacity:1;
+  transition: 1.3s all;
+  .animate-show-down .container{
+    opacity: 1;
+    transition: 1s all 5s;
+  }
 }
 
-.animate-hide.ng-hide {
-  opacity:0;
-  padding:0 10px;
+.animate-show-down.ng-hide {
+  opacity: 1;
+  height: 0;
+  .animate-show-down.ng-hide .container{
+    opacity: 0;
+  }
+    
 }
 
 
-.animate-show {
- -webkit-transition:all 0.3s linear 0.5s;
-  transition:all 0.3s linear 0.5s;
-  opacity:1;
-  padding:0 10px;
-}
-.animate-show.ng-show {
-  opacity:0;
-  padding:0 10px;
-}

@@ -51,7 +51,7 @@
                 padding-top:5px;
                 font-size: 14px;
                 border-radius:3px;
-                &.active {
+                &.Open {
                     background-color: $white;
                     height: 28px;
                 }
@@ -101,7 +101,7 @@
                     text-align: right;
                     font-size: 14px;
 
-                    &.active {
+                    &.Open {
                         background-color: $primaryColor;
                         height: 28px;
                     }
@@ -151,7 +151,7 @@
                     font-weight: 100;
                     text-align: right;
                     font-size: 14px;
-                    &.active {
+                    &.Open {
                         background-color: $primaryColor;
                     }
                 }

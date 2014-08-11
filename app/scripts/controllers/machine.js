@@ -9,8 +9,9 @@
  */
 
 var app = angular.module('dmafApp');
-app.controller('MachineCtrl', function($scope, $routeParams) {
+app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 	console.log($routeParams);
+
 
 
 
@@ -20,7 +21,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 	if($routeParams.machine === 'kuka'){
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "kuka";
-		$scope.gridRef = 'one-half';
+		$scope.gridRef = 'one';
 		$scope.bkimg = 'machines/kuka/banner.jpg';
 		$scope.machine = [{
 			name:'kuka',
@@ -38,7 +39,6 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 		$scope.materialsAllowed = "";
 		$scope.disallowedHeader = "";
 		$scope.materialsDisallowed = "";
-		$scope.bookings = ['',''];
 		$scope.bookingsReady = "";
 	}
 	/* To here */
@@ -81,6 +81,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 				link:''
 			}]
 		}];
+		$scope.showExtras = true;
 
 		$scope.description = "The Laboratory offers the use of one three laser cutters, enabling the cutting or engraving of sheet materials according to designs produced in Rhino, or produced in AutoCAD and imported into Rhino. The Universal machine is ideal for smaller cutting tasks and thin materials, while larger tasks are suited for the Trotec laser cutters.";
 		$scope.allowedicon = 'images/icons/materials/materials-allowed.jpg';
@@ -91,6 +92,10 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 		$scope.materialsDisallowed = "Materials containing PVC, Bleach, Toxic, Carcinogenic.\n Materials over 4.5mm (Universal) or 12mm (Totecs)";
 		$scope.bookings = ['Your file must be set up in the correct Rhino template','Read the instructions clearly stated on the Rhino template to ensure you are setting up your file correctly','Laser Inductions new to DMaF, you must bring the Material Safety Data Sheet (MSDS) these can be found online',"Ensure no lines duplicate (lines layered on top of each other). Run 'Make2D' or 'SelDup' Rhino commands to rectify duplicated lines",'Nest pieces across each panel carefully or by using nesting software such as RhinoNEST. Minimizing gaps between pieces saves material and reduces cutting time','Regardless of material type, your selection must be flat (tolerance +/-1mm).'];
 		$scope.bookingsReady = "";
+		$scope.bookingsUrl = [{name:'ALPHA',url:$sce.trustAsResourceUrl('http://www.planyo.com/embed-calendar.php?resource_id=7769&calendar=4006&style=week-grid&days=7')},
+								{name:'DELTA',url:$sce.trustAsResourceUrl('http://www.planyo.com/embed-calendar.php?resource_id=13835&calendar=4006&style=week-grid&days=7')},
+								{name:'GAMMA',url:$sce.trustAsResourceUrl('http://www.planyo.com/embed-calendar.php?resource_id=7771&calendar=4006&style=week-grid&days=7')},
+								{name:'Grad Studio GAMMA',url:$sce.trustAsResourceUrl('http://www.planyo.com/embed-calendar.php?resource_id=25880&calendar=4006&style=week-grid&days=7')}]
 
 	}
 	/* To here */
@@ -120,6 +125,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 				link:''
 			}]
 		}];
+		$scope.showExtras = true;
 
 		$scope.description = "Advancements in 3d printing, particularly plastic extrusion technology have enabled rapid and inexpensive production of 3D components using small, rapid prototypers. The DMaF has 3d printers from leading supplier Makerbot. The Laboratory’s three extruders use heated PLA (Polylactic Acid, a biodegradable plastic) to construct 3D models. The machines are capable of automatically generating scaffolding for the printing of parts accurately and cleanly. With these devices, students, staff and collaborators to the Laboratory can quickly prototype, test and develop their designs.";
 		$scope.allowedicon = '';
@@ -172,6 +178,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 				link:''
 			}]
 		}];
+		$scope.showExtras = true;
 
 		$scope.description = "The ZCorp310 & ZCorp510 Powder Rapid Prototypers enable the production of detailed, high-definition prototypes and three dimensional representations of designs. The precision inkjet printing system delivers components with crisp, defined features and high accuracy.";
 		$scope.allowedicon = '';
@@ -209,6 +216,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 				link:''
 			}]
 		}];
+		$scope.showExtras = true;
 
 		$scope.description = "The MultiCAM CNC router 3 Axis Router enables the efficient and accurate cutting of both 2D and 3D files in large format (1300mm x 2500mm) and has the largest gantry height of any machine of its kind (300mm). The machine has the capability to cut thick timbers and composites and Perspex / acrylic as well as soft metals to superior edge finishing and has a powerful vacuum table to hold down material. The MultiCAM CNC Router also has a ‘floating head’ or ‘air-assit’ when high accuracy is needed for materials such as Alucobond bending applications. Run by Enroute (2D) and Visual Mill software (3D), CNC machining allows for complete control over tool path direction and finish quality.";
 		$scope.allowedicon = 'images/icons/materials/materials-allowed.jpg';
@@ -247,6 +255,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 				link:''
 			}]
 		}];
+		$scope.showExtras = true;
 
 		$scope.description = "";
 		$scope.allowedicon = '';
@@ -283,6 +292,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 				link:''
 			}]
 		}];
+		$scope.showExtras = true;
 
 		$scope.description = "The Digital Fabrication Laboratory’s vacuum former uses heat and vacuum pressure to mold a melted sheet of plastic over a surface mold. Molds can be made from many materials depending on longevity required including plywood, card, composite, ceramics, plastics or alloys. Vacuum pressure is used to hold the melted plastic to the mold as temperature reduces, casting a plastic model.";
 		$scope.allowedicon = '';
@@ -320,7 +330,7 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 				link:''
 			}]
 		}];
-		$scope.showExtras = true;
+		$scope.showExtras = false;
 
 		$scope.description = "Due to the wide capabilities of the DMaF, the Centre is able to purchase a large range of materials and offer these at reduced prices to students, staff and collaborators. These include:\n" + "Where possible, materials are cut-to-size for the most appropriate, efficient and economical use on Digital Fabrication machines in the DMaF Labs. The Centre is also dedicated to the responsible use, reuse and disposal of material. As such, a large array of reusable materials are available for free throughout the workshops. We ask that all students be sympathetic to the environment when using materials throughout the DMaF Lab, ensuring objects are “nested” efficiently and recycling all materials where possible. Please also note that RhinoNEST software is available in DMaF Lab and Computer Lab 526. The DMaF Lab is continually adding to this large range of materials, experimenting with new uses and methods of fabrication and engaging in a diverse range of investigation into materiality, expression and construction technique at all stages of the design process.";
 		$scope.allowedicon = 'icons/materials/materials-allowed.jpg';

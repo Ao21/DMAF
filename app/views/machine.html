@@ -65,9 +65,19 @@
             <li ng-repeat="p in bookings">{{p}}</li>
         </ul>
         <h1 ng-hide="check" class="large  text--light text--center push-double--ends">Got all that?</h1>
-        <h1 ng-show="check" class="large text--light text--center push-double--ends">Are you sure?</h1>
-        <h1 class="text--light text--center"><span ng-mouseover="check=true" ng-mouseout="check=false"><a href="">Yes</a></span> | No</h1>
+        <h1 ng-show="check" class="large text--light text--center push-double--ends">Book this machine</h1>
+        <h1 class="text--light text--center"><span ng-click="bookingsOpen=true" ng-mouseover="check=true" ng-mouseout="check=false"><a href="">Yes</a></span> | No</h1>
 
+
+    </div>
+</div>
+<div ng-show="bookingsOpen" class="animate-show-down background-color--primary">
+    <div class="container soft-double--ends">
+        <div ng-repeat="items in bookingsUrl">
+        <h3>Laser Cutter {{items.name}}</h3>
+        <iframe class="push--bottom" style="background-color:#fafafa" width='100%' height='270' scrolling='auto' frameborder='0' ng-src=' {{items.url}}'></iframe>
+        </div>
+       
 
     </div>
 </div>
