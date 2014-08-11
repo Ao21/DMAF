@@ -34,6 +34,9 @@
     padding-left: 2px;
     vertical-align: top;
 }
+.one-quarter {
+    width: 25%;
+}
 .one-third {
     width: 33.3333%;
 }
@@ -97,3 +100,26 @@
         }
     }
 }
+
+
+.animate-show-down {
+ 
+  height: 100%;
+  opacity:1;
+  transition: 1.3s all;
+  .animate-show-down .container{
+    opacity: 1;
+    transition: 1s all 5s;
+  }
+}
+
+.animate-show-down.ng-hide {
+  opacity: 1;
+  height: 0;
+  .animate-show-down.ng-hide .container{
+    opacity: 0;
+  }
+    
+}
+
+

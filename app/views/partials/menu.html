@@ -3,7 +3,7 @@
         <div class="container">
             <ul class="nav horizontal">
                 <li ng-repeat="item in menuItems" ng-mouseover="menuHover($index)">
-                    <a href="#">{{item.section}}</a>
+                    <a href="#/{{item.topLink}}">{{item.section}}</a>
                 </li>
             </ul>
             <div class="dots" ng-class="currentHover">

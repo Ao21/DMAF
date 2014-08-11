@@ -24,6 +24,10 @@ angular
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl'
             })
+            .when('/staff', {
+                templateUrl: 'views/people.html',
+                controller: 'StaffCtrl'
+            })
             .when('/lab/:lab', {
                 templateUrl: 'views/lab.html',
                 controller: 'LabCtrl'
@@ -31,6 +35,10 @@ angular
             .when('/machine/:machine', {
                 templateUrl: 'views/machine.html',
                 controller: 'MachineCtrl'
+            })
+            .when('/booking', {
+                templateUrl: 'views/booking.html',
+                controller: 'BookingCtrl'
             })
             .when('/about', {
                 templateUrl: 'views/about.html',
