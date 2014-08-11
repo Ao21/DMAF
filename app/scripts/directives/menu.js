@@ -28,7 +28,7 @@ app.directive('menu', function($compile, $timeout,$location) {
                     section: 'Bookings & Downloads',
                     links: [{
                         icon: 'bookings',
-                        link: 'bookings',
+                        link: 'booking',
                         title: 'bookings'
                     }, {
                         icon: 'downloads',
@@ -62,7 +62,8 @@ app.directive('menu', function($compile, $timeout,$location) {
                 }, {
                     section: 'Media & Events'
                 }, {
-                    section: 'People & Contacts'
+                    section: 'People & Contacts',
+                    topLink: 'staff'
                 }]
             },
             post: function postLink(scope, iElement, iAttrs, controller) {
@@ -85,18 +86,26 @@ app.directive('menu', function($compile, $timeout,$location) {
                     switch(item){
                         case "pos0":
                         angular.element('.menuSubContainer').css('transform','translateX(0px)');
+                        angular.element('.container--wide-menu,.menuBlock').css('height','280px')
                         break;
                         case "pos1":
                         angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 1+'px)')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','280px')
                         break;
                         case "pos2":
                         angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 2+'px)')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','280px')
+
                         break;
                         case "pos3":
                         angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 3+'px)')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','0')
                         break;
                         case "pos4":
                         angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 4+'px)')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','0');
+
+
                         break;
 
                     }

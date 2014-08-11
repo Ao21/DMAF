@@ -63,8 +63,9 @@
         <ul class="bookings">
             <li ng-repeat="p in bookings">{{p}}</li>
         </ul>
-        <h1 class="large text--light text--center push-double--ends">Got all that?</h1>
-        <h1 class="text--light text--center">Yes | No</h1>
+        <h1 ng-hide="check" class="large  text--light text--center push-double--ends">Got all that?</h1>
+        <h1 ng-show="check" class="large text--light text--center push-double--ends">Are you sure?</h1>
+        <h1 class="text--light text--center"><span ng-mouseover="check=true" ng-mouseout="check=false"><a href="">Yes</a></span> | No</h1>
 
     </div>
 </div>

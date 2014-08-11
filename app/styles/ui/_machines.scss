@@ -34,6 +34,9 @@
     padding-left: 2px;
     vertical-align: top;
 }
+.one-quarter {
+    width: 25%;
+}
 .one-third {
     width: 33.3333%;
 }
@@ -96,4 +99,28 @@
             }
         }
     }
+}
+
+
+.animate-hide {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  opacity:1;
+}
+
+.animate-hide.ng-hide {
+  opacity:0;
+  padding:0 10px;
+}
+
+
+.animate-show {
+ -webkit-transition:all 0.3s linear 0.5s;
+  transition:all 0.3s linear 0.5s;
+  opacity:1;
+  padding:0 10px;
+}
+.animate-show.ng-show {
+  opacity:0;
+  padding:0 10px;
 }

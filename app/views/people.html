@@ -1,0 +1,37 @@
+
+<div class="container--wide-small background-color--primary machines__header" style="">
+    <div class="">
+        <h1>staff</h1>
+    </div>
+</div>
+
+
+
+
+<div>
+    <div class="grid machines">
+        <div ng-repeat="item in staff" class="grid__item  one-quarter">
+            <a href="#/machine/{{item.link}}">
+                <div class="machine">
+                    <div class="bkImg" style="background-color:#{{item.col}}"></div>
+                    <div class="bkImg" style="background-image:url(images/labs/{{item.img}});opacity:{{item.op}}"></div>
+                    <div class="text">
+                        <h2>{{item.name}}</h2>
+                        <p>{{item.desc}}</p>
+                        <p>{{item.subheading}}</p>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="footer--giant">
+    <h4>the revolution will be printed</h4>
+</div>

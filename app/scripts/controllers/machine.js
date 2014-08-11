@@ -28,14 +28,8 @@ app.controller('MachineCtrl', function($scope, $routeParams) {
 			brand: '',
 			bedSize: '',
 			cost:'',
-			costDesc:'',
-			downloads:[{
-				name:'Guide',
-				link:''
-			},{
-				name:'Rhino',
-				link:''
-			}]
+			costDesc:''
+			
 		}];
 
 		$scope.description = "";
