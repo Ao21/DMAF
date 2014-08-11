@@ -46,6 +46,14 @@
 <div class="container push-double--ends">
     <p ng-show="showExtras">{{description}}</p>
 
+    <div ng-show="videos.length" >
+        <div class="grid videos">
+            <div ng-repeat="vid in videos" class="grid__item one-third video">
+                <iframe src="http://www.youtube.com/embed/l7dzS8qO60g?color=white" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <div style="width:48%; float:left; padding-right:2%; position:relative">
         <h3 class="text--light" style="color:#309d58"><img src="{{allowedicon}}"/>{{allowedHeader}}</h3>
         <p>{{materialsAllowed}}</p>

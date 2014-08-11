@@ -123,3 +123,25 @@
 }
 
 
+.grid.videos{
+    .video {
+    position: relative;
+    padding-bottom: 13.25%;
+    margin-bottom:25px;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe,  
+.video object,  
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 100%;
+}
+}
+
+

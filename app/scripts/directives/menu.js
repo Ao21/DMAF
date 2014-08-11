@@ -95,15 +95,15 @@ app.directive('menu', function($compile, $timeout,$location) {
                     switch(item){
                         case "pos0":
                         angular.element('.menuSubContainer').css('transform','translateX(0px)');
-                        angular.element('.container--wide-menu,.menuBlock').css('height','280px')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','200px')
                         break;
                         case "pos1":
                         angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 1+'px)')
-                        angular.element('.container--wide-menu,.menuBlock').css('height','280px')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','200px')
                         break;
                         case "pos2":
                         angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 2+'px)')
-                        angular.element('.container--wide-menu,.menuBlock').css('height','280px')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','200px')
 
                         break;
                         case "pos3":

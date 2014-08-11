@@ -25,6 +25,8 @@ app.controller('LabCtrl', function($scope,$routeParams) {
 		{name:'Materials', desc: '', img: 'digfab/digfab8.jpg', col:'003471', op:'0.7', link:'materials'},
 
 		]
+		$scope.blurb = "Enabling the rapid and accurate production of prototypes and finished designs and extensive research opportunities in robotics, advanced fabrication through computation and material properties.";
+		$scope.blurbExpanded ="";
 	}
 	if($routeParams.lab === 'metal'){
 		$scope.machines = [
