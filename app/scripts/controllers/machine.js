@@ -26,10 +26,10 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		$scope.gridRef = 'one';
 		$scope.bkimg = 'machines/kuka/banner.jpg';
 		$scope.machine = [{
-			name:'kuka',
+			name:'KR60-3 6-Axis Router',
 			subname: '',
-			brand: '',
-			bedSize: '',
+			brand: 'Kuka',
+			bedSize: 'Working Envelope: 2003/2230/2429mm',
 			cost:'',
 			costDesc:''
 			
@@ -56,7 +56,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		$scope.gridRef = 'one-half';
 		$scope.bkimg = 'machines/laser/banner.jpg';
 		$scope.machine = [{
-			name:'Trotect 500 Laser Cutters',
+			name:'Trotec 500 Laser Cutters',
 			subname: 'Gamma & Delta',
 			brand: 'Trotec 120W',
 			bedSize: '1240x710mm',
