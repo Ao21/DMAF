@@ -1,15 +1,20 @@
 <div class="container--wide-small background-color--primary machines__header" style="">
     <div class="container">
-        <h2>Bookings</h2>
+        <h2>Bookings: Laser Cutting</h2>
     </div>
 </div>
 
-<div class="background-color--primary">
+
+
+<div  class="background-color--primary">
     <div class="container soft-double--ends">
         <h1 class="text--light large push--bottom">Before you book</h1>
         <ul class="bookings">
             <li ng-repeat="p in bookings">{{p}}</li>
-        </ul>        
+        </ul>
+        <h2 ng-show="termsAndConditions.length">Terms and Conditions</h2>
+        <div ng-bind-html="termsAndConditions"></div>
+
         <a ><h2 ng-click="bookingsOpen=true" class="large text--light text--center push-double--top">Book this machine</h2></a>
 
 

@@ -89,7 +89,7 @@ app.directive('menu', function($compile, $timeout,$location) {
                     switch(item){
                         case "pos0":
                         angular.element('.menuSubContainer').css('transform','translateX(0px)');
-                        angular.element('.container--wide-menu,.menuBlock').css('height','200px');
+                        angular.element('.container--wide-menu,.menuBlock').css('height','150px');
                         if(winWidth<1280){
                            var b = angular.element('.menuBlock > ul > li').css('width',winWidth/4)
                            angular.element('.menuBlock.it-4 ul').css('width',b*4)
@@ -98,7 +98,7 @@ app.directive('menu', function($compile, $timeout,$location) {
                         break;
                         case "pos1":
                         angular.element('.menuSubContainer').css('transform','translateX(-'+winWidth * 1+'px)')
-                        angular.element('.container--wide-menu,.menuBlock').css('height','220px')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','150px')
                         if(winWidth<1280){
                             var b = angular.element('.menuBlock > ul > li').css('width',winWidth/5)
                             angular.element('.menuBlock.it-3 ul').css('width',b*3)
@@ -106,7 +106,7 @@ app.directive('menu', function($compile, $timeout,$location) {
                         break;
                         case "pos2":
                         angular.element('.menuSubContainer').css('transform','translateX(-'+winWidth * 2+'px)')
-                        angular.element('.container--wide-menu,.menuBlock').css('height','220px')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','150px')
                         if(winWidth<1280){
                            var b = angular.element('.menuBlock > ul > li').css('width',winWidth/4)
                            angular.element('.menuBlock.it-4 ul').css('width',b *4)

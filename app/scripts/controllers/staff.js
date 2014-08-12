@@ -13,7 +13,7 @@ app.controller('StaffCtrl', function($scope,$routeParams) {
 
 		$scope.staff = [
 		{name:'Marjo Niemela', desc: 'DMaF Lab Manager', img: 'staff/marjo.jpg', col:'252525', op:'1', link:'marjo'},
-		{name:'Mel Wimborne', desc: 'Timber Fabrication & Digital Fabrication',subheading:'Fine woodwork (materials & equipment), CNC Routing, Laser Cutting', img: 'staff/mel.jpg', col:'252525', op:'1', link:'mel'},
+		{name:'Mel Wimborne', desc: 'Timber Fabrication & Digital Fabrication',subheading:'Fine woodwork (materials & equipment), CNC Routing, Laser Cutting', img: 'staff/mel.jpg', col:'252525', op:'0.6', link:'mel'},
 		{name:'Gabrielle Ulacco', desc: 'Robotics & Digital Fabrication', subheading:'Robotics, CNC Routing, Laser Cutting', img: 'digfab/staff/gabe.jpg', col:'252525', op:'1', link:'gabe'},
 		{name:'Celeste Raanoja', desc: 'Digital Fabrication & Robotics', subheading:'CNC Routing, Laser Cutting, 3D Printing, Robotics', img: 'staff/celeste.jpg', col:'252525', op:'1', link:'celeste'},
 		{name:'Dylan Wozniak-Oconnor', desc: 'Media Lab & Digital Fabrication', subheading:'3D & 2D Processes (casting, printmaking, soldering etc), 3D Printing, Laser Cutting', img: 'staff/dylan.jpg', col:'252525', op:'1', link:'dylan'},

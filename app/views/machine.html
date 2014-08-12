@@ -27,6 +27,10 @@
                                 <td><strong>Maximum Bed Size:</strong></td>
                                 <td>{{item.bedSize}}</td>
                             </tr>
+                            <tr ng-show="{{item.workingEnvelope.length}}">
+                                <td><strong>Working Envelope:</strong></td>
+                                <td>{{item.workingEnvelope}}</td>
+                            </tr>
                             <tr ng-show="{{item.cost.length}}">
                                 <td><strong>Cost:</strong></td>
                                 <td>{{item.cost}}</td>
@@ -47,7 +51,7 @@
 
 
 <div class="container push-double--ends">
-    <p ng-show="showExtras">{{description}}</p>
+    <p ng-show="showExtras" ng-bind-html="description"></p>
 
     <div ng-show="videos.length" >
         <div class="grid videos">
