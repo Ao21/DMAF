@@ -1,0 +1,28 @@
+<div class="container--wide-small background-color--primary machines__header" style="">
+    <div class="container">
+        <h2>Bookings</h2>
+    </div>
+</div>
+
+<div class="background-color--primary">
+    <div class="container soft-double--ends">
+        <h1 class="text--light large push--bottom">Before you book</h1>
+        <ul class="bookings">
+            <li ng-repeat="p in bookings">{{p}}</li>
+        </ul>        
+        <a ><h2 ng-click="bookingsOpen=true" class="large text--light text--center push-double--top">Book this machine</h2></a>
+
+
+    </div>
+</div>
+<div ng-show="bookingsOpen" class="animate-show-down background-color--primary">
+    <div class="container ">
+        <p ng-bind-html="bookingsReady"></p>
+        <div ng-repeat="items in bookingsUrl">
+            <h3>Laser Cutter {{items.name}}</h3>
+            <iframe class="push--bottom" style="background-color:#fafafa" width='100%' height='270' scrolling='auto' frameborder='0' ng-src=' {{items.url}}'></iframe>
+        </div>
+       
+
+    </div>
+</div>

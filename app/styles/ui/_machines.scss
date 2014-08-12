@@ -4,7 +4,7 @@
         margin-left: 0;
         color: white;
         font-weight: 200;
-        padding-top: 75px;
+        padding-top: 60px;
     }
 }
 .grid {
@@ -52,6 +52,7 @@
 
 .grid.machines {
     .machine {
+
         .text {
             
             z-index: 999999999;
@@ -84,6 +85,7 @@
         padding-bottom:80%;
         background-color:white;
         position:relative;
+        
         .bkImg {
             width: 100%;
             height: 100%;
@@ -107,6 +109,7 @@
 .animate-show-down {
  
   height: 100%;
+  margin-top:-25px;
   opacity:1;
   transition: 1.3s all;
   .animate-show-down .container{

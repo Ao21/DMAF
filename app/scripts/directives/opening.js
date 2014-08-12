@@ -17,7 +17,11 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
             },
 
             post: function(scope, element, attrs) {
-                scope.selected = 0;
+                var d = moment().isoWeekday()-1;
+                console.log(d);
+                 if(d!=7){
+                 scope.selected = d}
+                
                 scope.week = [
                     scope.Monday = true, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false
                 ]
