@@ -1,0 +1,26 @@
+<div class="container--wide-small background-color--primary machines__header" style="">
+    <div class="container">
+        <h2>{{label}}</h2>
+    </div>
+</div>
+
+<div class="container push-double--ends">
+    <div class="grid">
+        <div class="grid__item two-thirds soft-double--right">
+            <p ng-bind-html="info"></p>
+        </div><!--
+        --><div class="grid__item one-third soft--left">
+            <div ng-bind-html="bookingInfo"></div>
+            <p ng-repeat="para in bookings">{{para}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="footer--medium">
+    <h6>Design Modelling and Fabrication Lab 2014</h6>
+</div>
+
+

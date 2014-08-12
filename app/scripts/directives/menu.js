@@ -43,33 +43,25 @@ app.directive('menu', function($compile, $timeout,$location) {
                     section: 'Inductions & Access',
                     links: [{
                         icon:'sicu',
-                        link:'sicu',
+                        link:'induction/sicu',
                         title:'SICU Safety Induction and Competency Unit'
                     },{
                         icon:'laser',
-                        link:'laserCutting',
+                        link:'induction/laserCutting',
                         title:'Laser Cutting Inductions'
                     },{
                         icon: '3d',
-                        link: '3dprinting',
+                        link: 'induction/3dprinting',
                         title: '3D printing Inductions'
                     },
                     {
                         icon: 'access',
-                        link: 'access',
+                        link: 'induction/access',
                         title: 'Access'
                     }]
                 }, {
                     section: 'Media & Events',
-                    links: [{
-                        icon:'sicu',
-                        link:'media-1',
-                        title:'Media'
-                    },{
-                        icon:'laser',
-                        link:'media-2',
-                        title:'Find us on Facebook'
-                    }]
+                    topLink:'mediaEvents'
                 }, {
                     section: 'People & Contacts',
                     topLink: 'staff'
@@ -92,29 +84,43 @@ app.directive('menu', function($compile, $timeout,$location) {
 
 
                 function resizeMenu(item){
+                    var winWidth = angular.element(window).width();
+                    //angular.element('.labBlurb').removeClass('push-double--ends');
                     switch(item){
                         case "pos0":
                         angular.element('.menuSubContainer').css('transform','translateX(0px)');
-                        angular.element('.container--wide-menu,.menuBlock').css('height','200px')
-                        break;
-                        case "pos1":
-                        angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 1+'px)')
-                        angular.element('.container--wide-menu,.menuBlock').css('height','200px')
-                        break;
-                        case "pos2":
-                        angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 2+'px)')
-                        angular.element('.container--wide-menu,.menuBlock').css('height','200px')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','200px');
+                        if(winWidth<1280){
+                           var b = angular.element('.menuBlock > ul > li').css('width',winWidth/4)
+                           angular.element('.menuBlock.it-4 ul').css('width',b*4)
+                        }
 
                         break;
+                        case "pos1":
+                        angular.element('.menuSubContainer').css('transform','translateX(-'+winWidth * 1+'px)')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','220px')
+                        if(winWidth<1280){
+                            var b = angular.element('.menuBlock > ul > li').css('width',winWidth/5)
+                            angular.element('.menuBlock.it-3 ul').css('width',b*3)
+                        }
+                        break;
+                        case "pos2":
+                        angular.element('.menuSubContainer').css('transform','translateX(-'+winWidth * 2+'px)')
+                        angular.element('.container--wide-menu,.menuBlock').css('height','220px')
+                        if(winWidth<1280){
+                           var b = angular.element('.menuBlock > ul > li').css('width',winWidth/4)
+                           angular.element('.menuBlock.it-4 ul').css('width',b *4)
+                        }
+                        break;
                         case "pos3":
-                        angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 3+'px)')
+                        //angular.element('.labBlurb').addClass('push-double--ends');
+                        angular.element('.menuSubContainer').css('transform','translateX(-'+winWidth * 3+'px)')
                         angular.element('.container--wide-menu,.menuBlock').css('height','0')
                         break;
                         case "pos4":
-                        angular.element('.menuSubContainer').css('transform','translateX(-'+angular.element(window).width() * 4+'px)')
+                        //angular.element('.labBlurb').addClass('push-double--ends');
+                        angular.element('.menuSubContainer').css('transform','translateX(-'+winWidth * 4+'px)')
                         angular.element('.container--wide-menu,.menuBlock').css('height','0');
-
-
                         break;
 
                     }

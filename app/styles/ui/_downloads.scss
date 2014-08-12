@@ -1,0 +1,39 @@
+.smart-table {
+	width:100%;
+}
+
+.smart-table-header-row{
+
+    text-align: left;
+    font-size: 24px;
+    border-bottom: 3px solid $primaryColor;
+    cell: 24px;
+
+}
+
+.smart-table-global-search{
+
+    position: absolute;
+    top: -115px;
+    right: 0;
+    color: white;
+
+}
+
+
+.smart-table-header-cell:first-child{
+	padding:10px 0;
+}
+
+.smart-table-header-cell{
+	padding:10px 0 0 35px;
+}
+
+
+.smart-table-data-cell:first-child{
+	padding:4px 0;
+}
+
+.smart-table-data-cell{
+	padding:4px 6px 0 35px;
+}

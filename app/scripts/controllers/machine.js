@@ -13,6 +13,8 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 	console.log($routeParams);
 
 
+	
+
 
 
 	/* Copy from Here */
@@ -265,8 +267,6 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		$scope.disallowedicon = '';
 		$scope.disallowedHeader = "";
 		$scope.materialsDisallowed = "";
-		$scope.bookings = ['',''];
-		$scope.bookingsReady = "";
 	}
 	/* To here */
 
@@ -285,25 +285,18 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 			bedSize: 'TBA',
 			cost:'Free machine use',
 			costDesc:'PETG vacuum forming sheets available to purchase from DMaF',
-			downloads:[{
-				name:'Guide',
-				link:''
-			},{
-				name:'Rhino',
-				link:''
-			}]
+
 		}];
 		$scope.showExtras = true;
 
-		$scope.description = "The Digital Fabrication Laboratory’s vacuum former uses heat and vacuum pressure to mold a melted sheet of plastic over a surface mold. Molds can be made from many materials depending on longevity required including plywood, card, composite, ceramics, plastics or alloys. Vacuum pressure is used to hold the melted plastic to the mold as temperature reduces, casting a plastic model.";
+		$scope.description = "The Digital Fabrication Laboratory’s vacuum former uses heat and vacuum pressure to mold a melted sheet of plastic over a surface mold. Molds can be made from many materials depending on longevity required including plywood, card, composite, ceramics, plastics or alloys. Vacuum pressure is used to hold the melted plastic to the mold as temperature reduces, casting a plastic model.Remember that the object will need to be removed. Avoid undercuts, Use a draft angle of 3 degrees or more in the mold in order to avoid formed objects adhering to the mold.";
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
 		$scope.materialsAllowed = "";
 		$scope.disallowedicon = '';
 		$scope.disallowedHeader = "";
 		$scope.materialsDisallowed = "";
-		$scope.bookings = ['Remember that the object will need to be removed. Avoid undercuts','Use a draft angle of 3 degrees or more in the mold in order to avoid formed objects adhering to the mold.'];
-		$scope.bookingsReady = "";	}
+			}
 	/* To here */
 
 
