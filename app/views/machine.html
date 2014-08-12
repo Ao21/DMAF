@@ -34,6 +34,9 @@
                         </tbody>
                     </table>
                     <h4 ng-show="{{item.downloads.length}}" class="push-double--top">DOWNLOADS</h4>
+                    <div>
+                        <a class="downloads" ng-repeat="d in item.downloads" href="{{d.link}}"><img src="{{d.icon}}" alt=""></a>
+                    </div>
                     <p ng-show="!showExtras" ng-bind-html="description"></p>
                 </div>
             </div>
@@ -72,13 +75,16 @@
         <ul class="bookings">
             <li ng-repeat="p in bookings">{{p}}</li>
         </ul>
-        <a ><h2 ng-click="bookingsOpen=true" class="large text--light text--center push-double--ends">Book this machine</h2></a>
+        <h2 ng-show="termsAndConditions.length">Terms and Conditions</h2>
+        <div ng-bind-html="termsAndConditions"></div>
+
+        <a ><h2 ng-click="bookingsOpen=true" class="large text--light text--center push-double--top">Book this machine</h2></a>
 
 
     </div>
 </div>
 <div ng-show="bookingsOpen" class="animate-show-down background-color--primary">
-    <div class="container soft-double--ends">
+    <div class="container ">
         <p ng-bind-html="bookingsReady"></p>
         <div ng-repeat="items in bookingsUrl">
             <h3>Laser Cutter {{items.name}}</h3>
@@ -88,6 +94,4 @@
 
     </div>
 </div>
-<div class="footer--medium">
-    <h6>Design Modelling and Fabrication Lab 2014</h6>
-</div>
+

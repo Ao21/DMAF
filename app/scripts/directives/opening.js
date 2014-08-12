@@ -17,7 +17,11 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
             },
 
             post: function(scope, element, attrs) {
-                scope.selected = 0;
+                var d = moment().isoWeekday()-1;
+                console.log(d);
+                 if(d!=7){
+                 scope.selected = d}
+                
                 scope.week = [
                     scope.Monday = true, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false
                 ]
@@ -58,7 +62,7 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
                 var fResult = [];
                 var cResult = [];
                 var count = 0;
-                var urls = ['1g2ZzEkMfxi7Cv35w9ZY81eZEbCpbRuOW17b8Kea5', '1CsKCjuet4r1gfPEPUHOV9NfDyTbLKuDwM_7s30AK', '1CicPP7wZSFdleoPX5IBWgm6bDHGaBdH3z9_Zlv-j']
+                var urls = ['1g2ZzEkMfxi7Cv35w9ZY81eZEbCpbRuOW17b8Kea5', '1CsKCjuet4r1gfPEPUHOV9NfDyTbLKuDwM_7s30AK', '1CicPP7wZSFdleoPX5IBWgm6bDHGaBdH3z9_Zlv-j','1yZQbdvmLgty_wEF4zVrN8OcsC95p__i52ufGUNZp','1xE2lxHDB-c__YfboWWTVJM-S2v2XZWXsI3-Gfuxj','1sWEAsFFXjoPH7WbkAfvZCHoQgvvFZ1miOTbZ0_Sw']
                 start();
 
                 function start() {
@@ -165,6 +169,14 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
                                 case "Metal":
                                     d.digfab = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
                                     break;
+                                case "3d":
+                                    d.open3d = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
+                                    break;
+                                case "2d":
+                                    d.open2d = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
+                                    break;
+                                case "mixed":
+                                    d.mixed = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
                             }
 
                         };
