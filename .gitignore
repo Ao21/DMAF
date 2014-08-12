@@ -4,4 +4,8 @@ dist
 .sass-cache
 bower_components
 designs
+<<<<<<< HEAD
 .DS_Store
+=======
+.DS_STORE
+>>>>>>> 12ede69e806b41934e6e866fa73aa48bea42cfed
