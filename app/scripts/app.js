@@ -72,4 +72,10 @@ angular
             .otherwise({
                 redirectTo: '/'
             });
-    });
+    })
+.config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+   'self',
+   "http://www.youtube.com/embed/**"
+  ])
+});

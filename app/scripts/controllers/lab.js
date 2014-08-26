@@ -26,7 +26,7 @@ app.controller('LabCtrl', function($scope,$routeParams) {
 
 		]
 		$scope.blurb = "Enabling the rapid and accurate production of prototypes and finished designs and extensive research opportunities in robotics, advanced fabrication through computation and material properties.";
-		$scope.blurbExpanded ="<p>This broad scope of complex equipment includes a Kuka KR60 6 Axis Robot with milling spindle, Multicam 3 Axis CNC Router, Roland Model CNC Mill with rotary 4th axis, Trotec and Universal laser cutters, ZCorp powder rapid prototypers, vacuum former and Makerbot 3D extruders.</p><p>As a central part of the DMaF, the University of Sydney Digital Fabrication Laboratory works closely within both the Bachelor of Design in Architecture and Masters of Architecture programs as well as facilitates strong research, experimentation and production linkages with Design Lab and Tin Sheds Gallery.</p><p> Such linkages promote a more integrated and interdisciplinary learning experience for students within the Faculty.</p>";
+		$scope.blurbExpanded ="<p>This broad scope of complex equipment includes a Kuka KR60 6 Axis Robot with milling spindle, Multicam 3 Axis CNC Router, Roland Model CNC Mill with rotary 4th axis, Trotec and Universal laser cutters, ZCorp powder rapid prototypers, vacuum former and Makerbot 3D extruders.</p><p>As a central part of the DMaF, the University of Sydney Digital Fabrication Laboratory works closely within the Bachelor of Design in Architecture, Bachelor of Design Computing, Bachelor of Architecture and Environments, Masters of Architecture programs and Master of Interaction Design and Electronic Arts as well as facilitates strong research, experimentation and production linkages with PhD students and the Tin Sheds Gallery.</p><p> Such linkages promote a more integrated and interdisciplinary learning experience for students within the Faculty.</p>";
 	}
 	if($routeParams.lab === 'metal'){
 		$scope.machines = [
@@ -42,7 +42,7 @@ app.controller('LabCtrl', function($scope,$routeParams) {
 	if($routeParams.lab === 'timber'){
 		$scope.machines = [
 		{name:'Level 1 equipment', desc: 'Access: SICU completion', img: 'timber/timber0.jpg', col:'252525', op:'0.24', link:'timber-level1'},
-		{name:'Level 2, Level 3 & Level 4 equipment', desc: 'Access: SICU completion & Individual Machine Induction', img: 'timber/timber1.jpg', col:'555555', op:'0.7', link:'timber-level234'},
+		{name:'Level 2, Level 3 & Level 4 equipment', desc: 'Access: SICU completion & Individual Machine Induction', img: 'timber/timber1.jpg', col:'252525', op:'0.7', link:'timber-level234'},
 		{name:'Materials', desc: '', img: 'timber/timber2.jpg', col:'555555', op:'0.7', link:'materials'},
 		
 		]
@@ -52,9 +52,9 @@ app.controller('LabCtrl', function($scope,$routeParams) {
 
 	if($routeParams.lab === 'media'){
 		$scope.machines = [
-		{name:'2D Processes', desc: 'Access: SICU completion', img: 'digfab/digfab0.jpg', col:'252525', op:'0.24', link:'media-2d'},
-		{name:'3D Processes', desc: 'Access: SICU completion & Individual Machine Induction', img: 'digfab/digfab1.jpg', col:'555555', op:'0.7', link:'media-3d'},
-		{name:'Mixed Media', desc: '', img: 'digfab/digfab2.jpg', col:'555555', op:'0.7', link:'media-mixed'},
+		{name:'2D Processes', desc: 'Access: SICU completion', img: 'media/medialab-2d/banner.jpg', col:'252525', op:'0.24', link:'media-2d'},
+		{name:'3D Processes', desc: 'Access: SICU completion & Individual Machine Induction', img: 'media/medialab-3d/banner.jpg', col:'252525', op:'0.7', link:'media-3d'},
+		{name:'Mixed Media', desc: '', img: 'media/medialab-mixedmedia/banner.jpg', col:'555555', op:'0.7', link:'media-mixed'},
 		
 		]
 		$scope.blurb = "The Media Labs encompass the 2D processes lab, 3D processes lab and mixed media lab. Through elective units of study such as Printmaking, Ceramics, and Architectural Sketching and Drawing the media labs assist students in developing the conceptual and technical skills required to creatively explore dynamic connections between Architecture and art"

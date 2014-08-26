@@ -26,9 +26,10 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		$scope.gridRef = 'one';
 		$scope.bkimg = 'machines/kuka/banner.jpg';
 		$scope.machine = [{
-			name:'KR60-3 6-Axis Router',
+			name:'KR60-3 6-Axis Robot Arm',
 			subname: '',
 			brand: 'Kuka',
+			endEffectors:'Router Spindle, 3D Printer / Clay Extruder, Vacuum Grippers and more',
 			workingEnvelope: '2003/2230/2429mm',
 			cost:'',
 			costDesc:''
@@ -37,7 +38,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		$scope.showExtras = true;
 
 		$scope.description = "<p>The addition of the Kuka KR60-3 6-axis robot arm has consolidated the DMaF Lab's position as the leading university fabrication lab nationally. Equipped with a 60kg payload and a reach extending beyond a 2.4m building envelope, the possibilities for innovative, cutting edge research into fabrication and material technologies are extensive. The DMaF Lab is making every effort to facilitate research explorations with the acquisition of multiple end-effectors such as a spindle to enable 6 axis CNC milling, a 3D printer / clay extruder and various suction grippers capable of lifting and manoeuvre of irregular shaped objects.</p><p>In parallel to current market available end-effectors the DMaF Lab has acquired a new CNC mill for metals and alloys which enables the development and production of its designs of end-effectors that further broadens the capabilities of the robot arm.</p><p>In addition to facilitating a broad range of research outcomes throughout the Faculty for academic staff, HDRs and students, the Kuka KR60 is instrumental in providing opportunity for interdisciplinary collaboration within the Faculty such as those developing with Design Lab and Architecture, as well as with other Faculties, Universities and industry partners. This has enabled both staff and students to broaden the scope and diversity of research prospects and cultivate a new culture of learning that sits on the cusp of multiple disciplines and fields. Students and staff are now able to draw on the skills and knowledge of a range of skilled staff members in the search for innovative design practice, new material technologies and interactive design with iterative physical outputs via the Kuka Robot Arm. Robot fabrication courses are now offered to students to encourage these collaborations.</p><p>At present, DMaf lab staff are undertaking a rigorous and intensive training program on the Kuka KR60s capabilities and software platforms which have also been expanded to academic staff members and HDRs within the Faculty.</p><p>The Faculty of Architecture, Design and Planning was honoured to be selected as the host of the 2016 Robots in Architecture Conference – an intentional conference and workshop bringing together the most advanced robotic fabrication, art and design minds around the world. This will enable the DMaF Lab to not only display the research outputs and experimentation that is being undertaken at the university, but also be exposed to innovative fabrication practices and robotic fabrication applications from industry and other universities around the world.</p>";
-		$scope.videos = ['1','2','3','4','5','6'];
+		$scope.videos = [{url:'http://www.youtube.com/embed/NCqImBdsSOk?color=white'},{url:'http://www.youtube.com/embed/QjZ1SPve-z0?color=white'}];
 		$scope.allowedHeader = "";
 		$scope.materialsAllowed = "";
 		$scope.disallowedHeader = "";
@@ -85,7 +86,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 			},{
 				name:'Rhino',
 				icon:'images/icons/machines/rhino.svg',
-				link:'assets/downloads/2014_Alpha_V1.3dm'
+				link:'assets/downloads/2014_Alpha_V2.3dm'
 			}]
 		}];
 		$scope.showExtras = true;
@@ -208,7 +209,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 			subname: '',
 			brand: 'Multicam',
 			bedSize: '1200x2400mm',
-			cost:'$3.00 per 30 minutes (including file setup time)*',
+			cost:'$30.00 per 30 minutes (including file setup time)*',
 			costDesc:'2D and 3D routing of Perspex, Timber, Plywood or Foam. Materials that blunt the cutters (E.g. hardwoods) may incur an additional tool sharpening / tool replacement fee.',
 			
 		}];
@@ -306,7 +307,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		}];
 		$scope.showExtras = false;
 
-		$scope.description = "<p>Due to the wide capabilities of the DMaF, the Centre is able to purchase a large range of materials and offer these at reduced prices to students, staff and collaborators.</p><p> These include: </p><p>Where possible, materials are cut-to-size for the most appropriate, efficient and economical use on Digital Fabrication machines in the DMaF Labs.</p><p>The Centre is also dedicated to the responsible use, reuse and disposal of material. As such, a large array of reusable materials are available for free throughout the workshops. We ask that all students be sympathetic to the environment when using materials throughout the DMaF Lab, ensuring objects are “nested” efficiently and recycling all materials where possible.</p><p>Please also note that RhinoNEST software is available in DMaF Lab and Computer Lab 526. The DMaF Lab is continually adding to this large range of materials, experimenting with new uses and methods of fabrication and engaging in a diverse range of investigation into materiality, expression and construction technique at all stages of the design process.</p>";
+		$scope.description = "<p>Due to the wide capabilities of the DMaF, the Centre is able to purchase a large range of materials and offer these at reduced prices to students, staff and collaborators.</p><p> These include: </p><ul style='list-style:initial'><li>Solid timbers in a variety of species</li><li>Composite boards such as plywood, Masonite, Alucobond and chipboard in varying thicknesses and sheet sizes</li><li>Sheet metals and alloys, metal and aluminium tubes, rods, bars and extrusions</li><li>Perspex / Acrylic sheets and rods</li><li>Polypropylene</li><li>Boxboard, screen board, corrugated cardboard, foam core</li><li>Extruded and expanded foam</li><li>Tool kits</li><li>Casting products</li><li>Printmaking essentials</li><li>Solder products</li></ul>	<p>Where possible, materials are cut-to-size for the most appropriate, efficient and economical use on Digital Fabrication machines in the DMaF Labs.</p><p>The Centre is also dedicated to the responsible use, reuse and disposal of material. As such, a large array of reusable materials are available for free throughout the workshops. We ask that all students be sympathetic to the environment when using materials throughout the DMaF Lab, ensuring objects are “nested” efficiently and recycling all materials where possible.</p><p>Please also note that RhinoNEST software is available in DMaF Lab and Computer Lab 526. The DMaF Lab is continually adding to this large range of materials, experimenting with new uses and methods of fabrication and engaging in a diverse range of investigation into materiality, expression and construction technique at all stages of the design process.</p>";
 		$scope.allowedicon = 'icons/materials/materials-allowed.jpg';
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
@@ -342,7 +343,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		}];
 		$scope.showExtras = false;
 
-		$scope.description = '<p>Successful completion of SICU (Safety Induction and Competency Unit) required prior to Level 1 machine use. SICU, run intensively at the beginning of each academic semester, offers a comprehensive introduction to all Level 1 equipment throughout the whole DMaF Lab.</p><p><strong>Level 1 Metalastics equipment:</strong></p><ul><li>• Portable spot welders</li><li>• Metal bandsaw</li><li>• Plastics bandsaw</li><li>• Drill press</li><li>• Compressed air</li><li>• Disc sander</li><li>• Fly press (bending)</li><li>• Magnetic metal bender</li><li>•	Manual guillotine</li><li>• Metal pan brake</li><li>• Metal angle bender</li><li>• Metal roller</li></ul><h2><a href="/#/induction/sicu">Book SICU</a></h2><h2><a href="/#/machine/metal-level234">Level 2, 3 & 4 Metalastics Lab equipment</a></h2>';
+		$scope.description = '<p>Successful completion of SICU (Safety Induction and Competency Unit) required prior to Level 1 machine use. SICU, run intensively at the beginning of each academic semester, offers a comprehensive introduction to all Level 1 equipment throughout the whole DMaF Lab.</p><p><strong>Level 1 Metalastics equipment:</strong></p><ul><li>Portable spot welders</li><li>Metal bandsaw</li><li>Plastics bandsaw</li><li>Drill press</li><li>Compressed air</li><li>Disc sander</li><li>Fly press (bending)</li><li>Magnetic metal bender</li><li>•	Manual guillotine</li><li>Metal pan brake</li><li>Metal angle bender</li><li>Metal roller</li></ul><h2><a href="http://www.sydney.edu.au/architecture/dmaf/#/induction/sicu">Book SICU</a></h2><h2><a href="http://www.sydney.edu.au/architecture/dmaf/#/machine/metal-level234">Level 2, 3 & 4 Metalastics Lab equipment</a></h2>';
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
 		$scope.materialsAllowed = "";
@@ -372,7 +373,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		}];
 		$scope.showExtras = false;
 
-		$scope.description = "<p>Access to Level 2, Level 3 and Level 4 equipment is gained after successful completion of the Safety Induction and Competency Unit (SICU) as well as a Machine Specific Induction for the particular higher-level machine that you would like to use. Please speak to DMaF staff to arrange a Machine Specific Induction.</p><p><strong>Level 2 equipment:</strong></p><ul><li>• English wheel</li><li>• Perspex Bender</li><li>• Fixed spot welder</li><li>• Cold saw</li><li>• Soldering irons</li><li>• Bench grinders</li><li>• Fly press (cutting & stamping)</li></ul><p><strong>Level 3 equipment:</strong></p><ul><li>• Electric hacksaw</li><li>• Large drill press</li><li>• Small lathe</li><li>• Motorized guillotine</li></ul><p><strong>Level 4 equipment:</strong></p><ul><li>• Large lathe</li><li>• Mill</li><li>• CNC Tormech</li></ul>";
+		$scope.description = "<p>Access to Level 2, Level 3 and Level 4 equipment is gained after successful completion of the Safety Induction and Competency Unit (SICU) as well as a Machine Specific Induction for the particular higher-level machine that you would like to use. Please speak to DMaF staff to arrange a Machine Specific Induction.</p><p><strong>Level 2 equipment:</strong></p><ul><li>English wheel</li><li>Perspex Bender</li><li>Fixed spot welder</li><li>Cold saw</li><li>Soldering irons</li><li>Bench grinders</li><li>Fly press (cutting & stamping)</li></ul><p><strong>Level 3 equipment:</strong></p><ul><li>Electric hacksaw</li><li>Large drill press</li><li>Small lathe</li><li>Motorized guillotine</li></ul><p><strong>Level 4 equipment:</strong></p><ul><li>Large lathe</li><li>Mill</li><li>CNC Tormech</li></ul>";
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
 		$scope.materialsAllowed = "";
@@ -439,7 +440,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		}];
 		$scope.showExtras = false;
 
-		$scope.description = '<p>Successful completion of SICU (Safety Induction and Competency Unit) required prior to Level 1 machine use. SICU, run intensively at the beginning of each academic semester, offers a comprehensive introduction to all Level 1 equipment throughout the whole DMaF Lab.</p><p><strong>Level 1 Timber Fabrication Lab equipment:</strong></p><ul><li>• Bandsaws</li><li>• Disc Sander – Hammer</li><li>• Sharpening Whetstone</li><li>• Drill press</li><li>• Bobbin Sander</li><li>• Scroll Saw</li></ul><h2><a href="/#/induction/sicu">Book SICU</a></h2><h2><a href="/#/machine/timber-level234">Level 2, 3 & 4 Timber Fabrication Lab equipment</a></h2>';
+		$scope.description = '<p>Successful completion of SICU (Safety Induction and Competency Unit) required prior to Level 1 machine use. SICU, run intensively at the beginning of each academic semester, offers a comprehensive introduction to all Level 1 equipment throughout the whole DMaF Lab.</p><p><strong>Level 1 Timber Fabrication Lab equipment:</strong></p><ul><li>Bandsaws</li><li>Disc Sander – Hammer</li><li>Sharpening Whetstone</li><li>Drill press</li><li>Bobbin Sander</li><li>Scroll Saw</li></ul><h2><a href="http://www.sydney.edu.au/architecture/dmaf/#/induction/sicu">Book SICU</a></h2><h2><a href="http://www.sydney.edu.au/architecture/#/machine/timber-level234">Level 2, 3 & 4 Timber Fabrication Lab equipment</a></h2>';
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
 		$scope.materialsAllowed = "";
@@ -469,7 +470,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		}];
 		$scope.showExtras = false;
 
-		$scope.description = '<p>Access to Level 2, Level 3 and Level 4 equipment is gained after successful completion of the Safety Induction and Competency Unit (SICU) as well as a Machine Specific Induction for the particular higher-level machine that you would like to use. Please speak to DMaF staff to arrange a Machine Specific Induction.</p><p><strong>Level 2 Timber Fabrication Lab equipment:</strong></p><ul><li>• Lathe - Woodfast</li><li>• Mortiser (chisel/drill attachment)</li><li>• Large Disc Sander</li><li>• Thicknesser</li><li>• Festool Drop Saw</li></ul><p><strong>Level 3 Timber Fabrication Lab equipment:</strong></p><ul><li>• Large table saw (cross cutting)</li><li>• Mortiser (chain attachment)</li></ul><p><strong>Level 4 Timber Fabrication Lab equipment:</strong></p><ul><li>• Large table saw (ripping)</li><li>• Jointer (planer)</li></ul><h2><a href="/#/induction/sicu">Book SICU</a></h2><h2><a href="/#/machine/timber-level1">Level 1 Timber Fabrication Lab equipment</a></h2>';
+		$scope.description = '<p>Access to Level 2, Level 3 and Level 4 equipment is gained after successful completion of the Safety Induction and Competency Unit (SICU) as well as a Machine Specific Induction for the particular higher-level machine that you would like to use. Please speak to DMaF staff to arrange a Machine Specific Induction.</p><p><strong>Level 2 Timber Fabrication Lab equipment:</strong></p><ul><li>Lathe - Woodfast</li><li>Mortiser (chisel/drill attachment)</li><li>Large Disc Sander</li><li>Thicknesser</li><li>Festool Compound Mitre Saw / Drop Saw</li></ul><p><strong>Level 3 Timber Fabrication Lab equipment:</strong></p><ul><li>Large table saw / panel saw (cross cutting)</li><li>Mortiser (chain attachment)</li></ul><p><strong>Level 4 Timber Fabrication Lab equipment:</strong></p><ul><li>Large table saw / panel saw (ripping)</li><li>Jointer (planer)</li></ul><h2><a href="http://www.sydney.edu.au/architecture/dmaf/#/induction/sicu">Book SICU</a></h2><h2><a href="http://www.sydney.edu.au/architecture/dmaf/#/machine/timber-level1">Level 1 Timber Fabrication Lab equipment</a></h2>';
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
 		$scope.materialsAllowed = "";
@@ -494,7 +495,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "2D processes";
 		$scope.gridRef = 'one';
-		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.bkimg = 'labs/media/medialab-2d/banner.jpg';
 		$scope.machine = [{
 			name:'',
 			subname: '',
@@ -506,7 +507,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		}];
 		$scope.showExtras = false;
 
-		$scope.description = '<p>TBA</p>';
+		$scope.description = '<ul><li><p>Architectural Sketching & Drawing</p></li><li><p>Digital Video</p></li><li><p>General Drawing</p></li><li><p>Photography</p></li><li><p>Printmaking</p></li></ul>';
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
 		$scope.materialsAllowed = "";
@@ -527,7 +528,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "3D processes";
 		$scope.gridRef = 'one';
-		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.bkimg = 'labs/media/medialab-3d/banner.jpg';
 		$scope.machine = [{
 			name:'',
 			subname: '',
@@ -539,7 +540,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		}];
 		$scope.showExtras = false;
 
-		$scope.description = '<p>TBA</p>';
+		$scope.description = '<ul><li><p>Casting</p></li><li><p>Object Design</p></li><li><p>Sculpture</p></li><li><p>Site Specific Art</p></li></ul>';
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
 		$scope.materialsAllowed = "";
@@ -562,7 +563,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		/* routeparams = link in array in lab.js  */
 		$scope.label = "mixed media";
 		$scope.gridRef = 'one';
-		$scope.bkimg = 'machines/vacuumformer/banner.jpg';
+		$scope.bkimg = 'labs/media/medialab-mixedmedia/banner.jpg';
 		$scope.machine = [{
 			name:'',
 			subname: '',
@@ -574,7 +575,7 @@ app.controller('MachineCtrl', function($scope, $routeParams,$sce) {
 		}];
 		$scope.showExtras = false;
 
-		$scope.description = '<p>TBA</p>';
+		$scope.description = '<p>Soldering</p>';
 		$scope.allowedicon = '';
 		$scope.allowedHeader = "";
 		$scope.materialsAllowed = "";

@@ -13,7 +13,7 @@ app.controller('DownloadCtrl', function($scope) {
     $scope.rowCollection = [
         {icon:'',documentName: '3D Extruder Induction', type:'Induction',machine: 'Extruders', link:'assets/downloads/3DExtruderInduction.pdf', lab:'Digital Fabrication'},
         {icon:'',documentName: '3D Powder Induction', type:'Induction',machine: 'Powder', link:'assets/downloads/3DPowderInduction.pdf', lab:'Digital Fabrication'},
-        {icon:'',documentName: 'Alpha Laser Cutter Template', type:'Template',machine: 'Laser Cutters', link:'assets/downloads/2014_Alpha_V1.3dm', lab:'Digital Fabrication'},
+        {icon:'',documentName: 'Alpha Laser Cutter Template', type:'Template',machine: 'Laser Cutters', link:'assets/downloads/2014_Alpha_V2.3dm', lab:'Digital Fabrication'},
         {icon:'',documentName: 'Delta & Gamma Laser Cutter Template', type:'Template',machine: 'Laser Cutters', link:'assets/downloads/2014_DeltaGamma_V1.3dm', lab:'Digital Fabrication'},
         {icon:'',documentName: 'Laser Cutting Induction', type:'Induction',machine: 'Laser Cutters', link:'assets/downloads/LaserCuttingInduction.pdf', lab:'Digital Fabrication'},
     ];

@@ -1,7 +1,7 @@
 app.directive('openingHours', function($compile, $timeout, $compile) {
     return {
         restrict: 'AE',
-        replace: 'true',
+        replace: 'false',
         templateUrl: 'views/partials/opening.html',
         link: {
             pre: function(scope, element, attrs) {
@@ -17,14 +17,42 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
             },
 
             post: function(scope, element, attrs) {
+
+                 scope.week = [
+                    scope.Monday = false, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false
+                ]
+
+
                 var d = moment().isoWeekday()-1;
                 console.log(d);
                  if(d!=7){
-                 scope.selected = d}
+                 scope.selected = d
+                 scope.Monday = false, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false;
+                 console.log(d);
+                 switch(d){
+                    case 0:
+                    scope.Monday = true;
+                    break;
+                    case 1:
+                    scope.Tuesday = true;
+                    break;
+                    case 2:
+                    scope.Wednesday = true;
+                    break;
+                    case 3:
+                    scope.Thursday = true;
+                    break;
+                    case 4:
+                    scope.Friday = true;
+                    break;
+                    case 5:
+                    scope.Saturday = true;
+                    break;
+
+                 }
+             }
                 
-                scope.week = [
-                    scope.Monday = true, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false
-                ]
+               
 
 
                 scope.makeSelection = function(index, $event) {

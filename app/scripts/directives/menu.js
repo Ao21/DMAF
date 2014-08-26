@@ -1,7 +1,7 @@
 app.directive('menu', function($compile, $timeout,$location) {
     return {
         restrict: 'AE',
-        replace: 'true',
+        replace: 'false',
         templateUrl: 'views/partials/menu.html',
         link: {
             pre: function preLink(scope, iElement, iAttrs, controller) {
@@ -11,15 +11,15 @@ app.directive('menu', function($compile, $timeout,$location) {
                         icon: 'digfab',
                         link: 'lab/digfab',
                         title: 'digital fabrication lab'
-                    }, {
-                        icon: 'metalastics',
-                        link: 'lab/metal',
-                        title: 'metalastics lab'
-                    }, {
+                    },{
                         icon: 'timber',
                         link: 'lab/timber',
                         title: 'timber lab'
                     }, {
+                        icon: 'metalastics',
+                        link: 'lab/metal',
+                        title: 'metalastics lab'
+                    },  {
                         icon: 'mediaLab',
                         link: 'lab/media',
                         title: 'media lab'
