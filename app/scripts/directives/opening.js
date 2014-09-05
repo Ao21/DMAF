@@ -17,11 +17,11 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
             },
 
             post: function(scope, element, attrs) {
-                var d = moment().isoWeekday()-1;
-                console.log(d);
-                 if(d!=7){
-                 scope.selected = d}
-                
+                var d = moment().isoWeekday() - 1;
+                if (d != 7) {
+                    scope.selected = d
+                }
+
                 scope.week = [
                     scope.Monday = true, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false
                 ]
@@ -62,7 +62,7 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
                 var fResult = [];
                 var cResult = [];
                 var count = 0;
-                var urls = ['1g2ZzEkMfxi7Cv35w9ZY81eZEbCpbRuOW17b8Kea5', '1CsKCjuet4r1gfPEPUHOV9NfDyTbLKuDwM_7s30AK', '1CicPP7wZSFdleoPX5IBWgm6bDHGaBdH3z9_Zlv-j','1yZQbdvmLgty_wEF4zVrN8OcsC95p__i52ufGUNZp','1xE2lxHDB-c__YfboWWTVJM-S2v2XZWXsI3-Gfuxj','1sWEAsFFXjoPH7WbkAfvZCHoQgvvFZ1miOTbZ0_Sw']
+                var urls = ['1g2ZzEkMfxi7Cv35w9ZY81eZEbCpbRuOW17b8Kea5', '1CsKCjuet4r1gfPEPUHOV9NfDyTbLKuDwM_7s30AK', '1CicPP7wZSFdleoPX5IBWgm6bDHGaBdH3z9_Zlv-j', '1yZQbdvmLgty_wEF4zVrN8OcsC95p__i52ufGUNZp', '1xE2lxHDB-c__YfboWWTVJM-S2v2XZWXsI3-Gfuxj', '1sWEAsFFXjoPH7WbkAfvZCHoQgvvFZ1miOTbZ0_Sw']
                 start();
 
                 function start() {
@@ -158,16 +158,15 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
                         d.days = ['9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
                         for (var x = week[i].length - 1; x >= 0; x--) {
                             d.day = week[i][x].day;
-                            console.log(week[i][x].mow);
                             switch (week[i][x].mow) {
                                 case "Wood":
                                     d.wood = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
                                     break;
-                                case "digfab":
-                                    d.metal = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
+                                case "DigFab":
+                                    d.digfab = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
                                     break;
                                 case "Metal":
-                                    d.digfab = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
+                                    d.metal = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
                                     break;
                                 case "3d":
                                     d.open3d = [week[i][x].a, week[i][x].b, week[i][x].c, week[i][x].d, week[i][x].e, week[i][x].f, week[i][x].g, week[i][x].h, week[i][x].i, week[i][x].j, week[i][x].k, week[i][x].l];
@@ -180,6 +179,7 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
                             }
 
                         };
+                        console.log()
                         res.push(d);
                         scope.$apply(function() {
                             scope.openingHours.push(d);
@@ -224,9 +224,8 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
 
                     };*/
 
-                    console.log(res)
 
-                    
+
 
 
                 }
