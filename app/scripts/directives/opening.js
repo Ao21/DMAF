@@ -17,59 +17,51 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
             },
 
             post: function(scope, element, attrs) {
-<<<<<<< HEAD
                 var d = moment().isoWeekday() - 1;
                 if (d != 7) {
                     scope.selected = d
                 }
 
-                scope.week = [
-                    scope.Monday = true, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false
-                ]
-=======
 
-                 scope.week = [
+
+                scope.week = [
                     scope.Monday = false, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false
                 ]
 
 
-                var d = moment().isoWeekday()-1;
-                console.log(d);
-                 if(d!=7){
-                 scope.selected = d
-                 scope.Monday = false, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false;
-                 console.log(d);
-                 switch(d){
-                    case 0:
-                    scope.Monday = true;
-                    break;
-                    case 1:
-                    scope.Tuesday = true;
-                    break;
-                    case 2:
-                    scope.Wednesday = true;
-                    break;
-                    case 3:
-                    scope.Thursday = true;
-                    break;
-                    case 4:
-                    scope.Friday = true;
-                    break;
-                    case 5:
-                    scope.Saturday = true;
-                    break;
+                var d = moment().isoWeekday() - 1;
+                if (d != 7) {
+                    scope.selected = d
+                    scope.Monday = false, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false;
+                    switch (d) {
+                        case 0:
+                            scope.Monday = true;
+                            break;
+                        case 1:
+                            scope.Tuesday = true;
+                            break;
+                        case 2:
+                            scope.Wednesday = true;
+                            break;
+                        case 3:
+                            scope.Thursday = true;
+                            break;
+                        case 4:
+                            scope.Friday = true;
+                            break;
+                        case 5:
+                            scope.Saturday = true;
+                            break;
 
-                 }
-             }
-                
-               
->>>>>>> a5fcba041a093101c52287a62c46a564889674e7
+                    }
+                }
+
+
 
 
                 scope.makeSelection = function(index, $event) {
                     scope.selected = index;
                     scope.Monday = false, scope.Tuesday = false, scope.Wednesday = false, scope.Thursday = false, scope.Friday = false, scope.Saturday = false;
-                    console.log(scope.openingHours[0]);
                     switch ($event.currentTarget.innerHTML) {
                         case "Monday":
                             scope.Monday = true;
@@ -93,6 +85,10 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
 
                 }
 
+                scope.nextWeek = function() {
+                    start(moment("12/09/2014", "DD/MM/YYYY"));
+                }
+
                 scope.weekSelect = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 
@@ -104,24 +100,45 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
                 var urls = ['1g2ZzEkMfxi7Cv35w9ZY81eZEbCpbRuOW17b8Kea5', '1CsKCjuet4r1gfPEPUHOV9NfDyTbLKuDwM_7s30AK', '1CicPP7wZSFdleoPX5IBWgm6bDHGaBdH3z9_Zlv-j', '1yZQbdvmLgty_wEF4zVrN8OcsC95p__i52ufGUNZp', '1xE2lxHDB-c__YfboWWTVJM-S2v2XZWXsI3-Gfuxj', '1sWEAsFFXjoPH7WbkAfvZCHoQgvvFZ1miOTbZ0_Sw']
                 start();
 
-                function start() {
-                    for (var i = urls.length - 1; i >= 0; i--) {
-                        $.ajax({
-                            dataType: "jsonp",
-                            url: 'https://www.googleapis.com/fusiontables/v1/query?sql=SELECT * FROM ' + urls[i] + '&key=AIzaSyAdjbycGPJCo2R0w_S0L2gHjiv2XPJD0eY',
-                            success: function(data) {
-                                for (var x = data.rows.length - 1; x >= 0; x--) {
-                                    var day = new Day(data.rows[x][0], data.rows[x][1], data.rows[x][2], data.rows[x][3], data.rows[x][4], data.rows[x][5], data.rows[x][6], data.rows[x][7], data.rows[x][8], data.rows[x][9], data.rows[x][10], data.rows[x][11], data.rows[x][12], data.rows[x][13], data.rows[x][14]);
-                                    results.push(day);
+                function start(nDay) {
+                    if (nDay) {
+                        scope.openingHours.length = 0;
+                        count = 0;
+                        for (var i = urls.length - 1; i >= 0; i--) {
+                            $.ajax({
+                                dataType: "jsonp",
+                                url: 'https://www.googleapis.com/fusiontables/v1/query?sql=SELECT * FROM ' + urls[i] + '&key=AIzaSyAdjbycGPJCo2R0w_S0L2gHjiv2XPJD0eY',
+                                success: function(data) {
+                                    for (var x = data.rows.length - 1; x >= 0; x--) {
+                                        var day = new Day(data.rows[x][0], data.rows[x][1], data.rows[x][2], data.rows[x][3], data.rows[x][4], data.rows[x][5], data.rows[x][6], data.rows[x][7], data.rows[x][8], data.rows[x][9], data.rows[x][10], data.rows[x][11], data.rows[x][12], data.rows[x][13], data.rows[x][14]);
+                                        results.push(day);
 
-                                };
+                                    };
+                                    collectResults(results, i, nDay);
 
-                                collectResults(results, i);
+
+                                }
+                            });
+                        };
+                    } else {
+                        for (var i = urls.length - 1; i >= 0; i--) {
+                            $.ajax({
+                                dataType: "jsonp",
+                                url: 'https://www.googleapis.com/fusiontables/v1/query?sql=SELECT * FROM ' + urls[i] + '&key=AIzaSyAdjbycGPJCo2R0w_S0L2gHjiv2XPJD0eY',
+                                success: function(data) {
+                                    for (var x = data.rows.length - 1; x >= 0; x--) {
+                                        var day = new Day(data.rows[x][0], data.rows[x][1], data.rows[x][2], data.rows[x][3], data.rows[x][4], data.rows[x][5], data.rows[x][6], data.rows[x][7], data.rows[x][8], data.rows[x][9], data.rows[x][10], data.rows[x][11], data.rows[x][12], data.rows[x][13], data.rows[x][14]);
+                                        results.push(day);
+
+                                    };
+
+                                    collectResults(results, i);
 
 
-                            }
-                        });
-                    };
+                                }
+                            });
+                        };
+                    }
                 }
 
 
@@ -138,13 +155,25 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
 
                 }
 
-                function collectResults(results, i) {
-                    console.log(count);
-                    console.log(urls.length)
-                    cResult.push(results);
+                function week(result, day) {
+                    var sund = moment(day).day("Sunday").hour(0).minute(0).seconds(0).milliseconds(0); //get sunday
+                    var fri = moment(sund).add('d', 7); //plus 5 days
+                    for (var i = result.length - 1; i >= 0; i--) {
+                        if (moment(result[i].open, "DD-MM-YYYY").isAfter(sund) && moment(result[i].open, "DD-MM-YYYY").isBefore(fri)) {
+                            fResult.push(result[i]);
+                        }
+                    };
+                    processWeek(fResult)
 
+                }
+
+                function collectResults(results, i, day) {
                     if (count === urls.length - 1) {
-                        thisweek(results);
+                        if (day) {
+                            week(results, day);
+                        } else {
+                            thisweek(results);
+                        }
                     }
                     count++;
                 }
@@ -218,7 +247,7 @@ app.directive('openingHours', function($compile, $timeout, $compile) {
                             }
 
                         };
-                        console.log()
+
                         res.push(d);
                         scope.$apply(function() {
                             scope.openingHours.push(d);
