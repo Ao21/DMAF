@@ -31,9 +31,13 @@
                                 <td><strong>Working Envelope:</strong></td>
                                 <td>{{item.workingEnvelope}}</td>
                             </tr>
+                            <tr ng-show="{{item.endEffectors.length}}">
+                                <td><strong>End Effectors:</strong></td>
+                                <td>{{item.endEffectors}}</td>
+                            </tr>
                             <tr ng-show="{{item.cost.length}}">
                                 <td><strong>Cost:</strong></td>
-                                <td>{{item.cost}}</td>
+                                <td>{{item.cost}}<br>{{item.costDesc}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -56,7 +60,7 @@
     <div ng-show="videos.length" >
         <div class="grid videos">
             <div ng-repeat="vid in videos" class="grid__item one-third video">
-                <iframe src="http://www.youtube.com/embed/l7dzS8qO60g?color=white" frameborder="0" allowfullscreen></iframe>
+                <iframe src="{{vid.url}}" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
