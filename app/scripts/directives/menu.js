@@ -81,6 +81,10 @@ app.directive('menu', function($compile, $timeout, $location) {
                     resizeMenu(scope.currentHover);
                 })
 
+                 var wd = angular.element(window).width();
+                    angular.element('.menuBlock').width(wd);
+                    resizeMenu(scope.currentHover);
+
 
                 function resizeMenu(item) {
                     var winWidth = angular.element(window).width();
@@ -127,7 +131,8 @@ app.directive('menu', function($compile, $timeout, $location) {
 
 
 
-
+                    var mySVGsToInject = $('.svgInject');
+                    SVGInjector(mySVGsToInject);
 
 
                 scope.isActive = function(viewLocation) {

@@ -223,6 +223,15 @@ app.controller('MachineCtrl', function($scope, $routeParams, $sce) {
             bedSize: '1200x2400mm',
             cost: '$30.00 per 30 minutes (including file setup time)*',
             costDesc: '2D and 3D routing of Perspex, Timber, Plywood or Foam. Materials that blunt the cutters (E.g. hardwoods) may incur an additional tool sharpening / tool replacement fee.',
+            downloads: [{
+                name: 'Rhino2D',
+                icon: 'images/icons/machines/2d.svg',
+                link: 'assets/downloads/2014_2D_CNC_V1.3dm'
+            }, {
+                name: 'Rhino3D',
+                icon: 'images/icons/machines/3d.svg',
+                link: 'assets/downloads/2014_3D_CNC_V1.3dm'
+            }]
 
         }];
         $scope.showExtras = true;

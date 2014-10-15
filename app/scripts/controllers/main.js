@@ -15,4 +15,6 @@ app.controller('MainCtrl', function($scope) {
         'AngularJS',
         'Karma'
     ];
+    var mySVGsToInject = $('.svgInject');
+    SVGInjector(mySVGsToInject);
 });
