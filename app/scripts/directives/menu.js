@@ -140,11 +140,18 @@ app.directive('menu', function($compile, $timeout, $location) {
                     return active;
                 };
 
+
+
+
+
                 scope.$on('$viewContentLoaded', function() {
-                    var mySVGsToInject = $('.svgInject');
+                    $timeout(function(){
+                         var mySVGsToInject = $('.svgInject');
                     SVGInjector(mySVGsToInject);
                     var wd = angular.element(window).width();
                     angular.element('.menuBlock').width(wd);
+                    })
+                   
                 });
 
 

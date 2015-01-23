@@ -1,4 +1,8 @@
 <section class="openinghours">
+    <div class="nextWeek">
+        <a ng-click="selectThisWeek()" ng-class="{'active':selectedWeek == 0}" >This Week</a>
+        <a ng-click="selectNextWeek()" ng-class="{'active':selectedWeek == 1}">Next Week</a>
+    </div>
 
     <div class="selector ">
         <h3 ng-click="makeSelection($index,$event)" ng-repeat="day in weekSelect" ng-class="{active: $index == selected}">{{day}}</h3>

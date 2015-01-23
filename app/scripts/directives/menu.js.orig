@@ -132,8 +132,10 @@ app.directive('menu', function($compile, $timeout,$location) {
                      return active;
                 };
 
-                scope.$on('$viewContentLoaded', function() {
-                    var mySVGsToInject = $('.svgInject');
+                
+                $scope.$watch('$viewContentLoaded', function()
+                {
+                   var mySVGsToInject = $('.svgInject');
                     //console.log(mySVGsToInject);
                     SVGInjector(mySVGsToInject);
                     var wd = angular.element(window).width();

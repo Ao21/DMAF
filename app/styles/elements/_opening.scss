@@ -1,5 +1,17 @@
 .openinghours {
     overflow: hidden;
+    width: 100%;
+    .nextWeek {
+        float: right;
+        margin-bottom: 20px;
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a.active {
+            font-weight: bold;
+        }
+    }
     .selector {
         padding: $full-space 0px;
         h3 {
@@ -63,6 +75,7 @@
         }
     }
 }
+
 @media only screen and (min-width: 1280px) {
     .openinghours {
         .selector {
@@ -113,6 +126,7 @@
         }
     }
 }
+
 @media only screen and (min-width: 960px) and (max-width: 1279px) {
     .openinghours {
         .selector {
@@ -161,25 +175,37 @@
         }
     }
 }
+
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
 /* All Mobile Sizes (devices and browser) */
 
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+    .openinghours {
+        display: none;
+    }
+}
+
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 
-@media only screen and (max-width: 479px) {}@-webkit-keyframes enter_animation {
+@media only screen and (max-width: 479px) {}
+
+@-webkit-keyframes enter_animation {
     from {
-        opacity:0;
+        opacity: 0;
     }
     to {
-        opacity:1;
+        opacity: 1;
     }
 }
+
+
 @keyframes enter_animation {
     from {
         opacity: 0;
@@ -188,6 +214,8 @@
         opacity: 1;
     }
 }
+
+
 @-webkit-keyframes leave_animation {
     from {
         opacity: 1;
@@ -196,6 +224,8 @@
         opacity: 0;
     }
 }
+
+
 @keyframes leave_animation {
     from {
         opacity: 1;
@@ -204,21 +234,26 @@
         opacity: 0;
     }
 }
+
+
 .time-animation.ng-enter-stagger, .time-animation.ng-leave-stagger, .time-animation.ng-move-stagger {
     /* 200ms will be applied between each sucessive enter operation */
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
 }
+
 .time-animation.ng-enter, .time-animation.ng-leave, .time-animation.ng-move {
     -webkit-transition: 0.1s linear all;
     transition: 0.1s linear all;
 }
+
 .time-animation.ng-leave.ng-leave-active, .time-animation.ng-enter, .time-animation.ng-move {
     -webkit-transition: 0.1s linear all;
     transition: 0.1s linear all;
     opacity: 0;
     line-height: 0;
 }
+
 .time-animation.ng-leave, .time-animation.ng-move.ng-move-active, .time-animation.ng-enter.ng-enter-active {
     opacity: 1;
     line-height: 20px;
